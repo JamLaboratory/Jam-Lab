@@ -1,6 +1,7 @@
 ---
+import Engagement from '../../components/Engagement.astro';
 import Base from '../../layouts/Base.astro';import {rankings,dateLabel} from '../../lib/content.js';
 export function getStaticPaths(){return rankings.map(r=>({params:{slug:r.slug},props:{ranking:r}}))}
 const {ranking}=Astro.props;
 ---
-<Base title={ranking.title} description={ranking.description}><div class="kicker">Published {dateLabel(ranking.published)}{ranking.updated&&` · Updated ${dateLabel(ranking.updated)}`}</div><h1>{ranking.title}</h1><p class="lead">{ranking.description}</p><hr class="rule"/><div class="prose">{ranking.body.map(p=><p>{p}</p>)}</div></Base>
+<Base title={ranking.title} description={ranking.description}><div class="kicker">Published {dateLabel(ranking.published)}{ranking.updated&&` · Updated ${dateLabel(ranking.updated)}`}</div><h1>{ranking.title}</h1><p class="lead">{ranking.description}</p><hr class="rule"/><div class="prose">{ranking.body.map(p=><p>{p}</p>)}</div><Engagement type="ranking" slug={ranking.slug}/></Base>
