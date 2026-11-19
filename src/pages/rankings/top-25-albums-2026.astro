@@ -10,7 +10,7 @@ const dateLabel = (iso) => new Date(iso+'T12:00:00Z').toLocaleDateString('en-US'
   <img class="ranking-hero" src="/rankings/top-25-albums-2026/hero.jpeg" alt="Retro-inspired collage of Bruno Mars, Mastodon, Weezer and Luke Combs" />
   <hr class="rule"/>
   <div class="album-list">
-    {albums.map(album => <article class="album-entry">
+    {[...albums].sort((a,b)=>b.rank-a.rank).map(album => <article class="album-entry">
       <div class="album-art">{album.cover ? <img src={album.cover} alt={album.title+' album cover'} loading="lazy"/> : <span aria-label="Album artwork pending">ARTWORK PENDING</span>}</div>
       <div><div class="kicker">#{album.rank}</div><h2>{album.title}</h2><p>{album.artist}</p><div class="small">Released {dateLabel(album.released)}</div></div>
     </article>)}
