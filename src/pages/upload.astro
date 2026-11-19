@@ -1,0 +1,87 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Artwork Upload" description="Private artwork uploader for Jam Lab editors.">
+<section class="upload-page">
+  <div class="kicker">JAM LAB · EDITOR TOOLS</div>
+  <h1>Upload Album Artwork</h1>
+  <p>Select a cover from your phone and upload it to Jam Lab's own Cloudflare storage. Copy the resulting link into your ChatGPT review conversation.</p>
+  <form id="artwork-form" class="upload-form">
+    <label for="token">Private upload key</label>
+    <input id="token" type="password" autocomplete="off" spellcheck="false" required placeholder="Your private Cloudflare upload key" />
+    <p class="upload-hint">Used only for this upload. Never stored by this page. Do not share the key or a screenshot containing it.</p>
+    <label for="artwork">Album artwork</label>
+    <input id="artwork" type="file" accept="image/jpeg,image/png,image/webp" required />
+    <img id="preview" class="upload-preview" alt="Selected artwork preview" hidden />
+    <button id="upload-button" type="submit">Upload to Jam Lab</button>
+    <p id="status" role="status" aria-live="polite"></p>
+  </form>
+  <section id="result" class="upload-result" hidden>
+    <h2>Artwork uploaded</h2>
+    <a id="artwork-link" href="#" target="_blank" rel="noopener noreferrer"></a>
+    <button id="copy-link" type="button">Copy artwork link</button>
+    <p>Paste this link into ChatGPT and ask to attach it to your Jam Lab review.</p>
+  </section>
+</section>
+<style>
+.upload-page{max-width:680px;margin:0 auto;padding:2rem 0 4rem}
+.upload-page h1{margin:.5rem 0 1rem}
+.upload-form{display:grid;gap:.8rem;margin-top:2rem}
+.upload-form label{font-weight:700;color:#214B3B}
+.upload-form input{width:100%;max-width:100%;box-sizing:border-box;padding:1rem;border:1px solid #b4ad9d;border-radius:5px;background:#fff;font:inherit}
+.upload-hint{font-size:.85rem;opacity:.8;margin:0 0 .7rem}
+.upload-form button,.upload-result button{padding:.95rem 1.2rem;border:0;border-radius:5px;background:#214B3B;color:#F5F0E3;font:inherit;font-weight:700;cursor:pointer}
+.upload-form button:disabled{opacity:.55;cursor:wait}
+.upload-preview{width:min(100%,300px);aspect-ratio:1;object-fit:contain;margin:1rem auto;border:1px solid #b4ad9d}
+.upload-result{margin-top:2rem;border-top:1px solid #b4ad9d;padding-top:1.5rem;overflow-wrap:anywhere}
+.upload-result a{display:block;margin:1rem 0}
+</style>
+<script>
+const form=document.querySelector('#artwork-form');
+const fileInput=document.querySelector('#artwork');
+const tokenInput=document.querySelector('#token');
+const preview=document.querySelector('#preview');
+const status=document.querySelector('#status');
+const result=document.querySelector('#result');
+const button=document.querySelector('#upload-button');
+let previewUrl;
+fileInput.addEventListener('change',()=>{
+  if(previewUrl) URL.revokeObjectURL(previewUrl);
+  const file=fileInput.files?.[0];
+  if(file){previewUrl=URL.createObjectURL(file);preview.src=previewUrl;preview.hidden=false;}
+  else preview.hidden=true;
+  result.hidden=true;
+  status.textContent='';
+});
+form.addEventListener('submit',async(e)=>{
+  e.preventDefault();
+  const file=fileInput.files?.[0];
+  const key=tokenInput.value.trim();
+  if(!file||!key)return;
+  if(!['image/jpeg','image/png','image/webp'].includes(file.type)){status.textContent='Choose a JPG, PNG, or WebP image.';return;}
+  if(file.size===0||file.size>10*1024*1024){status.textContent='Image must be between 1 byte and 10 MB.';return;}
+  button.disabled=true;status.textContent='Uploading…';result.hidden=true;
+  try{
+    const response=await fetch('https://jam-lab-uploader.nickwalsh1125.workers.dev/upload',{
+      method:'POST',
+      headers:{'Authorization':'Bearer '+key,'Content-Type':file.type},
+      body:file
+    });
+    const data=await response.json().catch(()=>null);
+    if(!response.ok||!data?.success||!/^https:\/\/artwork\.jamlaboratory\.com\/uploads\//.test(data.url||'')){
+      throw new Error(data?.error||'Upload was not accepted. Check your key and try again.');
+    }
+    const link=document.querySelector('#artwork-link');
+    link.href=data.url;link.textContent=data.url;
+    document.querySelector('#copy-link').onclick=async()=>{
+      try{await navigator.clipboard.writeText(data.url);status.textContent='Link copied.';}
+      catch{status.textContent='Select the link above and copy it.';}
+    };
+    result.hidden=false;status.textContent='Upload complete.';
+    tokenInput.value='';
+  }catch(err){
+    status.textContent=err instanceof TypeError?'Could not contact the upload service. Browser access (CORS) may need to be enabled on the Cloudflare Worker.':(err.message||'Upload failed.');
+  }finally{button.disabled=false;}
+});
+</script>
+</Base>
