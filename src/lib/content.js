@@ -3,6 +3,24 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "dire-straits-on-every-street",
+  "artist": "Dire Straits",
+  "album": "On Every Street",
+  "year": 1991,
+  "genre": "Rock / Roots Rock",
+  "published": "2026-11-19",
+  "cover": "https://artwork.jamlaboratory.com/uploads/1292e517-b30c-42a4-8f88-e6c14dfc244d.jpg",
+  "scores": {
+    "composition": 4.7,
+    "writing": 5.2,
+    "performance": 4.7,
+    "production": 5.1,
+    "intangibles": 3.4
+  },
+  "body": [
+    "The Dire Strait’s final effort wasn’t exactly a “going out with a bang”…rather it feels like a sputtering car running out of gas in the middle of the interstate. “The Bug” is a tight little jig with some old school Knopfler touch, but the remainder of the record feels stale and, frankly, boring. Maybe that tastelessness is worse than a pure stinkfest for a band who were at the highest of highs in the 70s and 80s. We will always have “Sultans” at least!"
+  ]
+},{
   "slug": "steven-wilson-the-overview",
   "artist": "Steven Wilson",
   "album": "The Overview",
