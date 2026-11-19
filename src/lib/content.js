@@ -3,6 +3,24 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "airbourne-airbourne",
+  "artist": "Airbourne",
+  "album": "Airbourne",
+  "year": 2026,
+  "genre": "Hard Rock",
+  "published": "2026-11-19",
+  "cover": "https://artwork.jamlaboratory.com/uploads/3aa183b2-8305-4314-a2f3-077b8a1fcc1a.jpg",
+  "scores": {
+    "composition": 4.8,
+    "writing": 5.5,
+    "performance": 7,
+    "production": 7.4,
+    "intangibles": 8.1
+  },
+  "body": [
+    "AC/DC’s little brother is growing up! Now with a true catalogue on which we can reflect, Airbourne continues to impress with strong releases in the 2020s. Following in their influence’s steps, the Airbourne equation remains strong, like the quadratic formula. Tracks remain exciting and upbeat, though often not memorable, but O’Keefe’s vocals remain the impressive centerpiece of a group who aren’t slowing down quite yet."
+  ]
+},{
   "slug": "dire-straits-on-every-street",
   "artist": "Dire Straits",
   "album": "On Every Street",
