@@ -3,6 +3,24 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "neck-deep-neck-deep",
+  "artist": "Neck Deep",
+  "album": "Neck Deep",
+  "year": 2024,
+  "genre": "Pop Punk",
+  "published": "2026-11-19",
+  "cover": "https://artwork.jamlaboratory.com/uploads/IMG_8809.jpeg",
+  "scores": {
+    "composition": 8.1,
+    "writing": 8.5,
+    "performance": 8.4,
+    "production": 8.6,
+    "intangibles": 7.3
+  },
+  "body": [
+    "Finally dedicating an eponymous name to a release, Neck Deep come out scorching with this release. Extremely fun effort with lighting fast and barbed wire-tight percussion, Neck Deep served as a strong comeback from a weaker release “All Distortions Are Intentional” which felt frustratingly polished for a pop punk record. “Heartbreak of the Century” is a witty, fast-pasted leading single. The 1/2 hour length makes for a perfect punk record experience. A band in full force, Neck Deep ingrain themselves deeper, rightfully, in the scene."
+  ]
+},{
   "slug": "the-story-so-far-i-want-to-disappear",
   "artist": "The Story So Far",
   "album": "I Want to Disappear",
