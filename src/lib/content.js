@@ -93,7 +93,19 @@ export const reviews = [{
     "Who says a song can’t be 2 and a half minutes long anymore? The Story So Far continue to dominate the punk scene and harken back to a UK punk scene where a 5 minute song can’t be truncated into the time it takes to brush your teeth. “I Want to Disappear” is an extraordinary effort, filled with creative riffs, powerful timbre, and singing that seems to defy punk convention but retains all the grit. “All This Time” has a sky high chorus with the classic TSSF sounds that lifted them into the stratosphere in the first place. “White Shores” is as close to a ballad as punk can be—a masterclass in writing and feel. This effort stands only second to 2013’s What You Don’t See, and may be one of the better punk releases of the decade thus far."
   ]
 }];
-export const articles = [];
+export const articles = [{
+  "slug": "in-defense-of-a-delayed-chorus",
+  "title": "In Defense Of: A Delayed Chorus",
+  "published": "2026-11-19",
+  "description": "A case for the catharsis of making listeners earn the chorus.",
+  "series": "In Defense Of",
+  "hero": "",
+  "body": [
+    "You have heard “don’t bore us, get to the chorus.” Typical advice from an audience whose patient refuses to be tested musically. Let me argue: a delayed chorus often provides a more cathartic, beautiful release. Particularly in the ballad world. “Hand Me Downs” by the Irish group Amble provides a prime instance of the reward this can give, inspiring this article!",
+    "Make me EARN that chorus. Better yet, increase the PACE of the song as time progress. Modulate near the end! If music is storytelling, there’s no reason we can’t get more creative with delivering our climaxes. The entirety of “Echoes, Silence, Patience, and Grace” by Foo Fighters illustrate this perfectly. “Purple Rain” wasn’t afraid too, either.",
+    "I rest my case in favor of delaying our choruses."
+  ]
+}];
 export const rankings = [{slug:'top-25-albums-2026',title:'Top 25 Albums of 2026',published:'2026-11-19',description:'Twenty-five records that defined our listening year, plus three honorable mentions.',featured:true,hero:'/rankings/top-25-albums-2026/hero.jpeg',body:[]}];
 export const scoreFor = (scores) => Math.round(Object.values(scores).reduce((a,b)=>a+b,0)/5*10)/10;
 export const dateLabel = (iso) => new Date(`${iso}T12:00:00Z`).toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric',timeZone:'UTC'});
