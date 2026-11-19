@@ -99,7 +99,7 @@ export const articles = [{
   "published": "2026-11-19",
   "description": "A case for the catharsis of making listeners earn the chorus.",
   "series": "In Defense Of",
-  "hero": "",
+  "hero": "https://artwork.jamlaboratory.com/uploads/01eed73f-0578-4d26-89f0-708d5188d5b0.png",
   "body": [
     "You have heard “don’t bore us, get to the chorus.” Typical advice from an audience whose patient refuses to be tested musically. Let me argue: a delayed chorus often provides a more cathartic, beautiful release. Particularly in the ballad world. “Hand Me Downs” by the Irish group Amble provides a prime instance of the reward this can give, inspiring this article!",
     "Make me EARN that chorus. Better yet, increase the PACE of the song as time progress. Modulate near the end! If music is storytelling, there’s no reason we can’t get more creative with delivering our climaxes. The entirety of “Echoes, Silence, Patience, and Grace” by Foo Fighters illustrate this perfectly. “Purple Rain” wasn’t afraid too, either.",
