@@ -9,7 +9,7 @@ export const reviews = [{
   "year": 2024,
   "genre": "Pop Punk",
   "published": "2026-11-19",
-  "cover": null,
+  "cover": "https://artwork.jamlaboratory.com/uploads/IMG_8809.jpeg",
   "scores": {
     "composition": 8.1,
     "writing": 8.5,
