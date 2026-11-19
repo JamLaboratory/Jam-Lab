@@ -1,7 +1,159 @@
+
 ---
-import Base from '../../layouts/Base.astro';import {reviews,scoreFor} from '../../lib/content.js';
-const sorted=[...reviews].sort((a,b)=>b.published.localeCompare(a.published));
+import Base from '../../layouts/Base.astro';
+import { reviews, scoreFor } from '../../lib/content.js';
+
+const sorted = [...reviews].sort((a, b) => b.published.localeCompare(a.published));
+
+const genres = [...new Set(reviews.map((review) => review.genre))].sort();
+
+const decades = [
+  ...new Set(reviews.map((review) => Math.floor(review.year / 10) * 10))
+].sort((a, b) => b - a);
 ---
-<Base title="Reviews"><div class="kicker">THE LISTENING DESK</div><h1>Jam Lab Reviews</h1><p class="lead">Old favorites and new discoveries, scored on five equal measures.</p><div class="filters"><input id="search" type="search" placeholder="Search artist or album" aria-label="Search reviews"/><select id="genre" aria-label="Filter by genre"><option value="">All genres</option>{[...new Set(reviews.map(r=>r.genre))].sort().map(g=><option value={g}>{g}</option>)}</select><select id="decade" aria-label="Filter by decade"><option value="">All decades</option>{[...new Set(reviews.map(r=>Math.floor(r.year/10)*10))].sort((a,b)=>b-a).map(d=><option value={d}>{d}s</option>)}</select><select id="sort" aria-label="Sort reviews"><option value="newest">Newest reviews</option><option value="score">Highest score</option><option value="year">Newest releases</option></select></div>
-{sorted.length?<div class="reviewgrid" id="reviewgrid">{sorted.map(r=><article data-search={`${r.artist} ${r.album}`.toLowerCase()} data-genre={r.genre} data-decade={Math.floor(r.year/10)*10} data-date={r.published} data-score={scoreFor(r.scores)} data-year={r.year}><a href={`/reviews/${r.slug}/`}><div class="cover">{r.cover?<img src={r.cover} alt={`${r.album} cover`}/>: 'ALBUM ART'}</div><div class="small">{r.artist} · {r.year}</div><h3>{r.album}</h3><div class="score">{scoreFor(r.scores).toFixed(1)}</div></a></article>)}</div>:<div class="empty">The first album reviews are coming soon.</div>}
-<script>const grid=document.getElementById('reviewgrid');if(grid){const controls=['search','genre','decade','sort'].map(id=>document.getElementById(id));const cards=Array.from(grid.children);const refresh=()=>{const [q,g,d,s]=controls.map(el=>el.value.toLowerCase());cards.sort((a,b)=>s==='score'?Number(b.dataset.score)-Number(a.dataset.score):s==='year'?Number(b.dataset.year)-Number(a.dataset.year):b.dataset.date.localeCompare(a.dataset.date));cards.forEach(card=>{card.hidden=!(card.dataset.search.includes(q)&&(!g||card.dataset.genre.toLowerCase()===g)&&(!d||card.dataset.decade===d));grid.append(card)})};controls.forEach(c=>c.addEventListener('input',refresh))}</script></Base>
+
+<Base title="Reviews">
+  <div class="kicker">THE LISTENING DESK</div>
+
+  <h1>Jam Lab Reviews</h1>
+
+  <p class="lead">
+    Old favorites and new discoveries, scored on five equal measures.
+  </p>
+
+  <div class="filters">
+    <input
+      id="search"
+      type="search"
+      placeholder="Search artist or album"
+      aria-label="Search reviews"
+    />
+
+    <select id="genre" aria-label="Filter by genre">
+      <option value="">All genres</option>
+      {genres.map((genre) => (
+        <option value={genre}>{genre}</option>
+      ))}
+    </select>
+
+    <select id="decade" aria-label="Filter by decade">
+      <option value="">All decades</option>
+      {decades.map((decade) => (
+        <option value={decade}>{decade}s</option>
+      ))}
+    </select>
+
+    <select id="sort" aria-label="Sort reviews">
+      <option value="newest">Newest reviews</option>
+      <option value="score">Highest score</option>
+      <option value="year">Newest releases</option>
+    </select>
+  </div>
+
+  {sorted.length > 0 ? (
+    <div class="reviewgrid" id="reviewgrid">
+      {sorted.map((review) => (
+        <article
+          data-search={`${review.artist} ${review.album}`.toLowerCase()}
+          data-genre={review.genre}
+          data-decade={Math.floor(review.year / 10) * 10}
+          data-date={review.published}
+          data-score={scoreFor(review.scores)}
+          data-year={review.year}
+        >
+          <a href={`/reviews/${review.slug}/`}>
+            <div class="cover">
+              {review.cover ? (
+                <img
+                  src={review.cover}
+                  alt={`${review.album} cover`}
+                  loading="lazy"
+                />
+              ) : (
+                <span>ALBUM ART</span>
+              )}
+            </div>
+
+            <div class="small">
+              {review.artist} · {review.year}
+            </div>
+
+            <h3>{review.album}</h3>
+
+            <div class="score">
+              {scoreFor(review.scores).toFixed(1)}
+            </div>
+          </a>
+        </article>
+      ))}
+    </div>
+  ) : (
+    <div class="empty">
+      The first album reviews are coming soon.
+    </div>
+  )}
+
+  <script>
+    const grid = document.getElementById('reviewgrid');
+    const search = document.getElementById('search');
+    const genre = document.getElementById('genre');
+    const decade = document.getElementById('decade');
+    const sort = document.getElementById('sort');
+
+    if (
+      grid &&
+      search instanceof HTMLInputElement &&
+      genre instanceof HTMLSelectElement &&
+      decade instanceof HTMLSelectElement &&
+      sort instanceof HTMLSelectElement
+    ) {
+      const cards = Array.from(grid.children).filter(
+        (card) => card instanceof HTMLElement
+      );
+
+      const refresh = () => {
+        const query = search.value.trim().toLowerCase();
+        const selectedGenre = genre.value.toLowerCase();
+        const selectedDecade = decade.value;
+
+        cards.sort((a, b) => {
+          if (!(a instanceof HTMLElement) || !(b instanceof HTMLElement)) {
+            return 0;
+          }
+
+          if (sort.value === 'score') {
+            return Number(b.dataset.score) - Number(a.dataset.score);
+          }
+
+          if (sort.value === 'year') {
+            return Number(b.dataset.year) - Number(a.dataset.year);
+          }
+
+          return (b.dataset.date || '').localeCompare(a.dataset.date || '');
+        });
+
+        for (const card of cards) {
+          if (!(card instanceof HTMLElement)) continue;
+
+          card.hidden = !(
+            (card.dataset.search || '').includes(query) &&
+            (
+              !selectedGenre ||
+              (card.dataset.genre || '').toLowerCase() === selectedGenre
+            ) &&
+            (
+              !selectedDecade ||
+              card.dataset.decade === selectedDecade
+            )
+          );
+
+          grid.append(card);
+        }
+      };
+
+      for (const control of [search, genre, decade, sort]) {
+        control.addEventListener('input', refresh);
+      }
+    }
+  </script>
+</Base>
