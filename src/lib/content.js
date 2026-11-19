@@ -2,7 +2,25 @@
 // Review: {slug, artist, album, year, genre, published, cover, scores:{composition,writing,performance,production,intangibles}, body:[paragraphs]}
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
-export const reviews = [];
+export const reviews = [{
+  "slug": "the-story-so-far-i-want-to-disappear",
+  "artist": "The Story So Far",
+  "album": "I Want to Disappear",
+  "year": 2024,
+  "genre": "Pop Punk",
+  "published": "2026-11-19",
+  "cover": "https://www.visions.de/wp-content/uploads/TSSF-I-Want-To-Disappear.jpeg",
+  "scores": {
+    "composition": 9.5,
+    "writing": 8.8,
+    "performance": 9.4,
+    "production": 7.9,
+    "intangibles": 9.7
+  },
+  "body": [
+    "Who says a song can’t be 2 and a half minutes long anymore? The Story So Far continue to dominate the punk scene and harken back to a UK punk scene where a 5 minute song can’t be truncated into the time it takes to brush your teeth. “I Want to Disappear” is an extraordinary effort, filled with creative riffs, powerful timbre, and singing that seems to defy punk convention but retains all the grit. “All This Time” has a sky high chorus with the classic TSSF sounds that lifted them into the stratosphere in the first place. “White Shores” is as close to a ballad as punk can be—a masterclass in writing and feel. This effort stands only second to 2013’s What You Don’t See, and may be one of the better punk releases of the decade thus far."
+  ]
+}];
 export const articles = [];
 export const rankings = [{slug:'top-25-albums-2026',title:'Top 25 Albums of 2026',published:'2026-11-19',description:'Twenty-five records that defined our listening year, plus three honorable mentions.',featured:true,hero:'/rankings/top-25-albums-2026/hero.jpeg',body:[]}];
 export const scoreFor = (scores) => Math.round(Object.values(scores).reduce((a,b)=>a+b,0)/5*10)/10;
