@@ -3,5 +3,12 @@ import Base from '../layouts/Base.astro';
 ---
 <Base title="About"><div class="kicker">THE JOURNAL & THE EDITOR</div><h1>About Jam Lab</h1><hr class="rule"/>
 <section class="aboutsection"><h2>The Laboratory</h2><p>Jam Lab is an independently run music journal dedicated to the exploration and discussion of music across genres and decades. Though we may have our personal bent, Jam Lab leaves no sonic stone unturned.</p><p class="pullquote">Read, listen, comment—music is magic!</p></section>
-<section class="aboutsection"><h2>Meet the Editor</h2><p>I'm Nick—professionally, a physician; my alter ego, an inspired <em>Rolling Stone</em> editor from the late 1970s. Based in Nashville, I launched this project as a way to ground myself in all the music that surrounds me.</p></section>
+<section class="aboutsection"><h2>Meet the Editor</h2><div class="editor-profile"><img class="editor-photo" src="https://artwork.jamlaboratory.com/uploads/a0de1079-854b-438b-8717-ace214cb35eb.jpg" alt="Nick Walsh, editor of Jam Lab" loading="lazy"/><div><p><strong>Nick Walsh (pictured left)</strong>—professionally, a physician; my alter ego, an inspired <em>Rolling Stone</em> editor from the late 1970s. Based in Nashville, I launched this project as a way to ground myself in all the music that surrounds me.</p></div></div></section>
 <section class="aboutsection"><h2>The Philosophy</h2><p>More than a century after music was first captured and recorded, the musical landscape has become decentralized and seemingly infinite. Jam Lab exists to connect the past with the present. We review music both old and new, looking forward and backward through our commentary.</p><p class="pullquote">No good song will ever be left behind.</p><p>Let's dive!</p></section></Base>
+
+<style>
+.editor-profile{display:grid;grid-template-columns:minmax(160px,260px) minmax(0,1fr);gap:clamp(1.2rem,4vw,2.5rem);align-items:start}
+.editor-photo{width:100%;height:auto;display:block;object-fit:cover;border:1px solid #b69a55}
+.editor-profile p{margin-top:0}
+@media(max-width:580px){.editor-profile{grid-template-columns:minmax(0,1fr)}.editor-photo{max-width:280px}}
+</style>
