@@ -1,0 +1,26 @@
+---
+const {type,slug}=Astro.props;
+---
+<section class="engagement" data-engagement data-type={type} data-slug={slug} hidden>
+  <div class="engagement-top"><span>ENJOYED THIS {type.toUpperCase()}?</span><button type="button" data-like aria-pressed="false">♡ Like <span data-likes>0</span></button></div>
+  {type==='review'&&<div class="engagement-rating"><div><strong>PUBLIC SCORE</strong><div data-average>Awaiting ratings</div><small data-votes></small></div><form data-form><label for={'rating-'+slug}>Your rating (1.0–10.0)</label><input id={'rating-'+slug} type="number" min="1" max="10" step="0.1" value="8.0" required/><button type="submit">Submit rating</button></form></div>}
+  <p data-status role="status" aria-live="polite"></p>
+</section>
+<style>
+.engagement{border-top:1px solid #b69a55;border-bottom:1px solid #b69a55;padding:1.3rem 0;margin:2rem 0;color:#214b3b}.engagement-top{display:flex;align-items:center;justify-content:space-between;gap:1rem;font-size:.8rem;letter-spacing:.06em;font-weight:700}.engagement button{cursor:pointer;background:#214b3b;color:#f5f0e3;border:1px solid #214b3b;border-radius:3px;padding:.6rem .9rem;font:inherit}.engagement button[aria-pressed="true"]{background:#f5f0e3;color:#214b3b}.engagement-rating{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem;border-top:1px solid #b69a5560;margin-top:1.2rem;padding-top:1.2rem}.engagement-rating strong{font-size:.75rem;letter-spacing:.08em}.engagement-rating [data-average]{font-size:1.8rem;font-weight:700}.engagement-rating small{display:block}.engagement form{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}.engagement input{width:5rem;padding:.5rem;border:1px solid #b69a55;background:#fff;color:#214b3b}.engagement [data-status]{font-size:.8rem;margin:.7rem 0 0}.engagement [data-status]:empty{display:none}
+</style>
+<script>
+document.querySelectorAll('[data-engagement]').forEach(async el=>{
+ const type=el.dataset.type,slug=el.dataset.slug,endpoint='/api/engagement';
+ const like=el.querySelector('[data-like]'),status=el.querySelector('[data-status]');
+ const render=data=>{
+  el.hidden=false;el.querySelector('[data-likes]').textContent=data.likes;like.setAttribute('aria-pressed',String(data.liked));
+  like.innerHTML=(data.liked?'♥ Liked ':'♡ Like ')+`<span data-likes>${data.likes}</span>`;
+  if(type==='review'){el.querySelector('[data-average]').textContent=data.ratingAverage===null?'Awaiting ratings':data.ratingAverage.toFixed(1)+' / 10';el.querySelector('[data-votes]').textContent=data.ratingCount+' ratings'+(data.ratingCount<5?' · score shown after 5 votes':'');if(data.myRating!==null)el.querySelector('input').value=data.myRating.toFixed(1)}
+ };
+ try{const res=await fetch(endpoint+'?'+new URLSearchParams({type,slug}));if(!res.ok)return;render(await res.json())}catch{return}
+ const send=async(kind,value)=>{status.textContent='Saving…';try{const res=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({type,slug,kind,value})});if(!res.ok)throw Error();render(await res.json());status.textContent='Saved'}catch{status.textContent='Could not save. Please try again.'}};
+ like.addEventListener('click',()=>send('like',like.getAttribute('aria-pressed')!=='true'));
+ el.querySelector('[data-form]')?.addEventListener('submit',event=>{event.preventDefault();const input=el.querySelector('input');if(!input.checkValidity())return;send('rating',Math.round(Number(input.value)*10))});
+});
+</script>
