@@ -3,6 +3,26 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "mastodon-marrow-deep",
+  "artist": "Mastodon",
+  "album": "Marrow Deep",
+  "year": 2026,
+  "genre": "Progressive Metal",
+  "published": "2026-11-19",
+  "cover": "https://artwork.jamlaboratory.com/uploads/46b9b35e-fb01-407a-9411-0c592e9c1f1d.webp",
+  "scores": {
+    "composition": 9.5,
+    "writing": 9.2,
+    "performance": 9.9,
+    "production": 9,
+    "intangibles": 9.9
+  },
+  "body": [
+    "In a time of turmoil within the band, Mastodon deliver a seismic performance. Following the departure and subsequent death of founding guitarist Brent Hinds in 2025, Mastodon's direction and potential were unclear. *Marrow Deep* proves undoubtedly that the group continues to grow, improve, and capture a sound that separates them distinctly from their metal peers.",
+    "“In the Ruins”, “Barbarians Blood”, and “Golden Spires” stand out—the latter of which has some of the coolest sections in the band's lengthy discography. I place this comfortably up with *Crack the Skye* and *Hushed & Grim* as Mastodon's best efforts.",
+    "Album of the year candidate."
+  ]
+},{
   "slug": "airbourne-airbourne",
   "artist": "Airbourne",
   "album": "Airbourne",
