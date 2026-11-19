@@ -1,6 +1,7 @@
 ---
+import Engagement from '../../components/Engagement.astro';
 import Base from '../../layouts/Base.astro';import {articles,dateLabel} from '../../lib/content.js';
 export function getStaticPaths(){return articles.map(a=>({params:{slug:a.slug},props:{article:a}}))}
 const {article}=Astro.props;
 ---
-<Base title={article.title} description={article.description}><div class="kicker">{dateLabel(article.published)} · BY NICK WALSH</div><h1>{article.title}</h1><p class="lead">{article.description}</p>{article.hero&&<img src={article.hero} alt="" style="width:100%;max-height:550px;object-fit:cover"/>}<hr class="rule"/><div class="prose">{article.body.map(p=><p>{p}</p>)}</div></Base>
+<Base title={article.title} description={article.description}><div class="kicker">{dateLabel(article.published)} · BY NICK WALSH</div><h1>{article.title}</h1><p class="lead">{article.description}</p>{article.hero&&<img src={article.hero} alt="" style="width:100%;max-height:550px;object-fit:cover"/>}<hr class="rule"/><div class="prose">{article.body.map(p=><p>{p}</p>)}</div><Engagement type="article" slug={article.slug}/></Base>
