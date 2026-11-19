@@ -3,6 +3,24 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "steven-wilson-the-overview",
+  "artist": "Steven Wilson",
+  "album": "The Overview",
+  "year": 2025,
+  "genre": "Progressive Rock / Art Rock",
+  "published": "2026-11-19",
+  "cover": "https://artwork.jamlaboratory.com/uploads/5433c706-fdc6-497f-a641-93a2371f9376.png",
+  "scores": {
+    "composition": 6.5,
+    "writing": 4,
+    "performance": 7.5,
+    "production": 8,
+    "intangibles": 5.4
+  },
+  "body": [
+    "A unique experimental effort left me someone disengaged on this release. Although Wilson continues demonstrating his chops and ability to thread together art that only competes with itself, this spacious, atomizing release feels paradoxically impersonal, despite the thematic content. Some great sections include “Meanwhile” and “Cosmic Sons of Toil” but the 84 minutes slog at times and leave me wanting more songs like “The Raven”, amongst others."
+  ]
+},{
   "slug": "neck-deep-neck-deep",
   "artist": "Neck Deep",
   "album": "Neck Deep",
