@@ -9,7 +9,7 @@ export const reviews = [{
   "year": 2024,
   "genre": "Pop Punk",
   "published": "2026-11-19",
-  "cover": null,
+  "cover": "https://www.visions.de/wp-content/uploads/TSSF-I-Want-To-Disappear.jpeg",
   "scores": {
     "composition": 9.5,
     "writing": 8.8,
