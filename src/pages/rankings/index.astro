@@ -1,0 +1,5 @@
+---
+import Base from '../../layouts/Base.astro';import {rankings,dateLabel} from '../../lib/content.js';
+const sorted=[...rankings].sort((a,b)=>(b.bumped||b.published).localeCompare(a.bumped||a.published));
+---
+<Base title="Rankings"><div class="kicker">LISTEN. CONSIDER. DEBATE.</div><h1>Jam Lab Rankings</h1><p class="lead">Personal rankings of albums, songs, and artists—always open to another listen.</p><hr class="rule"/>{sorted.length?<div class="archive">{sorted.map(r=><article><div class="kicker">Published {dateLabel(r.published)}{r.updated&&` · Updated ${dateLabel(r.updated)}`}</div><h2><a href={`/rankings/${r.slug}/`}>{r.title}</a></h2><p>{r.description}</p></article>)}</div>:<div class="empty">The first rankings are coming soon.</div>}</Base>
