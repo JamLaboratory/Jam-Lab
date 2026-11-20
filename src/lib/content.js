@@ -3,6 +3,27 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "american-football-american-football",
+  "artist": "American Football",
+  "album": "American Football",
+  "year": 1999,
+  "genre": "Midwest Emo / Math Rock",
+  "published": "2026-11-20",
+  "cover": "https://artwork.jamlaboratory.com/uploads/362ab79a-c17b-4dea-9916-9829d490bafb.jpg",
+  "scores": {
+    "composition": 9.7,
+    "writing": 9.1,
+    "performance": 9.5,
+    "production": 7.5,
+    "intangibles": 9
+  },
+  "body": [
+    "It’s always a treat to listen to what represents ground zero for a particular genre. It’s even more rewarding when that starting point is itself a phenomenal introduction to the music.",
+    "*American Football* represents an intriguing one-off (at least at the time) that helped inspire hundreds of musicians to follow suit in the worlds of Midwest emo and math rock.",
+    "Clean guitar tones and understated vocals, combined with experimental instrumentation, make this album an absolute treat. Its successors helped shape a unique musical world that I adore, and none of it would have been possible without this record."
+  ]
+},{
+
   "slug": "beartooth-pure-ecstasy",
   "artist": "Beartooth",
   "album": "Pure Ecstasy",
