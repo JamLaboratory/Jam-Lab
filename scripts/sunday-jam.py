@@ -113,13 +113,13 @@ def main():
     email, = saved["emails"]
     if not email.get("is_designed"):
         raise SystemExit("MailerLite did not confirm that the saved draft is designed")
+    if not live:
+        print("Proof draft saved. Use MailerLite's preview and Send a test; the campaign send was not called.")
+        return
+
     preview = api(f"emails/{email['id']}/html")["data"]["html"]
     if any(marker not in preview for marker in markers[:-1]):
         raise SystemExit("The saved MailerLite preview is missing required content")
-    if not live:
-        print("Verified proof draft; no recipient group assigned")
-        return
-
     timezones = [row for row in api("timezones")["data"]
                  if row["name"] == "America/Chicago"]
     if len(timezones) != 1:
