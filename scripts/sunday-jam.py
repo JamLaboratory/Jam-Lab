@@ -85,34 +85,35 @@ def main():
             raise SystemExit("Expected exactly one Sunday Jam subscriber group")
         groups = [matches[0]["id"]]
 
+    existing_draft = None
     for status in ("sent", "ready", "draft"):
         existing = list(matching_records(f"campaigns?filter[status]={status}&limit=100", name))
+        if existing and status != "draft":
+            print(f"Issue already exists ({status})")
+            return
+        if len(existing) > 1:
+            raise SystemExit("Multiple MailerLite drafts match this issue")
         if existing:
-            raise SystemExit(f"Issue already exists ({status}); inspect it before retrying")
+            existing_draft = existing[0]
 
-    draft = api("campaigns", "POST", {
+    payload = {
         "name": name,
         "type": "regular",
         "groups": groups,
         "emails": [{"subject": issue["subject"], "from_name": "Jam Laboratory",
                     "from": "newsletter@jamlaboratory.com", "content": html}],
-    })["data"]
-    campaign_id = draft["id"]
+    }
+    if existing_draft:
+        campaign_id = existing_draft["id"]
+        api(f"campaigns/{campaign_id}", "PUT", payload)
+    else:
+        campaign_id = api("campaigns", "POST", payload)["data"]["id"]
     print(f"Created MailerLite draft {campaign_id}", flush=True)
     saved = api(f"campaigns/{campaign_id}")["data"]
     email, = saved["emails"]
     if not email.get("is_designed"):
         raise SystemExit("MailerLite did not confirm that the saved draft is designed")
-    preview_url = email.get("preview_url")
-    if not preview_url:
-        if live:
-            raise SystemExit("MailerLite did not return a preview URL; draft held")
-        print("Proof draft requires visual verification in MailerLite")
-        return
-    if urlparse(preview_url).scheme != "https":
-        raise SystemExit("Unexpected draft preview URL; draft held")
-    with urlopen(preview_url, timeout=25) as response:
-        preview = response.read().decode(errors="replace")
+    preview = api(f"emails/{email['id']}/html")["data"]["html"]
     if any(marker not in preview for marker in markers[:-1]):
         raise SystemExit("The saved MailerLite preview is missing required content")
     if not live:
