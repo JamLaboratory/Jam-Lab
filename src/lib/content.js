@@ -3,6 +3,26 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "audioslave-revelations",
+  "artist": "Audioslave",
+  "album": "Revelations",
+  "year": 2006,
+  "genre": "Hard Rock / Alternative Rock",
+  "published": "2026-11-20",
+  "cover": "https://artwork.jamlaboratory.com/uploads/b406e333-ba16-4de7-8aca-2fcdfe7ba222.jpg",
+  "scores": {
+    "composition": 3.5,
+    "writing": 5,
+    "performance": 6.5,
+    "production": 2.9,
+    "intangibles": 6
+  },
+  "body": [
+    "After their explosive debut, I felt Audioslave could catapult themselves near the top of my favorite rock acts of the decade. Unfortunately, *Revelations* sounds the death knell for what was once one of the most exciting supergroups around. Morello’s soloing is grating and stale.",
+    "The album lacks the power and swagger of their debut. “Original Fire” is a decent track, but sadly, nothing else truly stands out. The production is dry and bland. Fortunately, Chris Cornell has plenty of other music in his catalog that better reflects his remarkable talent and gifts."
+  ]
+},{
+
   "slug": "alter-bridge-walk-the-sky",
   "artist": "Alter Bridge",
   "album": "Walk the Sky",
