@@ -3,6 +3,26 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "the-smiths-the-smiths",
+  "artist": "The Smiths",
+  "album": "The Smiths",
+  "year": 1984,
+  "genre": "Alternative Rock / Indie Rock / Post-Punk",
+  "published": "2026-11-19",
+  "cover": "https://artwork.jamlaboratory.com/uploads/ffd14734-1a4d-4be5-b42f-1a2075b1edc5.jpg",
+  "scores": {
+    "composition": 7,
+    "writing": 6.5,
+    "performance": 5.3,
+    "production": 7.6,
+    "intangibles": 8.5
+  },
+  "body": [
+    "For an American boy growing up in the 2000’s Midwest, this band understandably was a hard egg to crack. British pop as a whole wasn’t commonplace in the Walsh household, but while digging into this group over a podcast with my friend Aaron, things began to click. ",
+    "I found the crooning tones of Morrissey growing on me, though the composition and writing left a little to be desired ultimately. “Reel Around the Fountain” is an excellent opening. Jingly guitar tones and sober atmosphere create a paradoxically enjoyable soundscape. “This Charming Man” proves that great riffs don’t have to come from flashy guitar legends. "
+  ]
+},{
+
   "slug": "pure-prairie-league-firin-up",
   "artist": "Pure Prairie League",
   "album": "Firin' Up",
