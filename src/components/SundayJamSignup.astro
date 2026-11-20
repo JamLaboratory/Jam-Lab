@@ -1,0 +1,33 @@
+---
+const {variant='compact'}=Astro.props;
+const featured=variant==='featured';
+---
+<section class:list={['jam-signup',{'jam-signup--featured':featured}]} aria-label="Subscribe to The Sunday Jam">
+  <div class="jam-signup__identity">
+    <img src="/classic-listener.svg" alt="" width="88" height="86" loading="lazy" />
+    <div><div class="jam-signup__eyebrow">JAM LABORATORY PRESENTS · THE WEEKLY DISPATCH</div><h2>The Sunday Jam</h2><p class="jam-signup__tagline">{featured?'Good music. Better Sundays.':'Never Miss a Good Song.'}</p></div>
+  </div>
+  <p class="jam-signup__description">{featured?'Reviews from the Lab, new discoveries, music news and the albums to watch. Delivered every Sunday morning.':'Enjoyed this piece? Get reviews, music discoveries and the latest from Jam Lab in your inbox every Sunday.'}</p>
+  <div class="jam-signup__form"><div class="ml-embedded" data-form="I8UICD"></div></div>
+  <div class="jam-signup__bottom"><span>FREE TO READ · EVERY SUNDAY · NO SPAM</span><a href="/newsletter/">What's inside the newsletter?</a></div>
+</section>
+<style>
+.jam-signup{--signup-green:#214b3b;--signup-gold:#b69a55;--signup-ivory:#f5f0e3;background:#faf7ef;border:1px solid var(--signup-gold);padding:clamp(1.35rem,4vw,2.25rem);margin:2.5rem 0;position:relative;overflow:hidden}
+.jam-signup:before{content:"";position:absolute;inset:6px;border:1px solid rgba(182,154,85,.3);pointer-events:none}
+.jam-signup--featured{background:var(--signup-green);color:var(--signup-ivory);padding:clamp(1.6rem,5vw,3.5rem)}
+.jam-signup__identity{display:flex;align-items:center;gap:clamp(.85rem,2vw,1.5rem);position:relative}
+.jam-signup__identity img{width:clamp(62px,9vw,94px);height:auto;flex:none}
+.jam-signup--featured .jam-signup__identity img{filter:brightness(0) invert(1)}
+.jam-signup__eyebrow{font:700 11px/1.5 Josefin,sans-serif;letter-spacing:2px;color:#8e7139}
+.jam-signup--featured .jam-signup__eyebrow{color:#e0c987}
+.jam-signup h2{font-size:clamp(1.8rem,4vw,3rem);margin:.25rem 0;color:var(--signup-green)}
+.jam-signup--featured h2{color:var(--signup-ivory)}
+.jam-signup__tagline{font-style:italic;margin:0;color:#8e7139}
+.jam-signup--featured .jam-signup__tagline{color:#e0c987}
+.jam-signup__description{max-width:650px;margin:1.25rem 0 .75rem;line-height:1.6;position:relative}
+.jam-signup__form{max-width:680px;position:relative}
+.jam-signup__bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1rem;align-items:center;margin-top:1rem;font:700 11px/1.5 Josefin,sans-serif;letter-spacing:1px;position:relative}
+.jam-signup__bottom a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.jam-signup--featured .jam-signup__bottom{color:#f5f0e3}
+@media(max-width:520px){.jam-signup__identity img{width:58px}.jam-signup__eyebrow{font-size:9px;letter-spacing:1px}.jam-signup__bottom{font-size:10px}.jam-signup{margin:2rem 0}}
+</style>
