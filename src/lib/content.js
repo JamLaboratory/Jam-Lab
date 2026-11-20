@@ -3,6 +3,25 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "karnivool-asymmetry",
+  "artist": "Karnivool",
+  "album": "Asymmetry",
+  "year": 2013,
+  "genre": "Progressive Metal / Alternative Metal",
+  "published": "2026-11-20",
+  "cover": "https://artwork.jamlaboratory.com/uploads/37d88354-5226-421d-a926-97dc1eb3d56e.jpg",
+  "scores": {
+    "composition": 6.5,
+    "writing": 7.6,
+    "performance": 8,
+    "production": 8.4,
+    "intangibles": 6.3
+  },
+  "body": [
+    "This band is one of the more interesting experimental/progressive metal bands out there today, period. Their debut album, *Themata*, is powerful, interesting, and complex, with stylistic tendencies similar to that of Tool or Soen, but they maintain their own sound. This record, though, does feel a little airy at times, and I often wonder if there's too much unfilled space. The sound isn't atmospheric enough to justify some of these decisions. Though overall, the album does make for a decent listen. It can feel like a bit of a tedious ride at times, but the standout tracks often justify the listen. This is one I'll go back to every now and then, but sits well below the quality of *Themata* and *Inverses*."
+  ]
+},{
+
   "slug": "audioslave-revelations",
   "artist": "Audioslave",
   "album": "Revelations",
