@@ -3,6 +3,25 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "pure-prairie-league-firin-up",
+  "artist": "Pure Prairie League",
+  "album": "Firin' Up",
+  "year": 1980,
+  "genre": "Country Rock / Southern Rock",
+  "published": "2026-11-19",
+  "cover": "https://artwork.jamlaboratory.com/uploads/9fb3da68-c606-4357-bc29-debecc3395d6.jpg",
+  "scores": {
+    "composition": 6,
+    "writing": 7.5,
+    "performance": 9,
+    "production": 8.2,
+    "intangibles": 5.9
+  },
+  "body": [
+    "A deeper cut that deserves some love! PPL are known well for their hit “Amie”, but Firin’ Up provides a great array of crispy, uplifting southern rock. Though not as deep musically as Eagles or Lynyrd, these tracks hold their own, and Vince Gill add an amazing harmonious touch to the vocal section. “I’m Almost Ready” illustrates this well."
+  ]
+},{
+
   "slug": "meshuggah-obzen",
   "artist": "Meshuggah",
   "album": "obZen",
