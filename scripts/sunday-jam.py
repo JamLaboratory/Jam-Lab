@@ -108,12 +108,25 @@ class NewsletterBlocks(HTMLParser):
         self.text.append(node)
 
 
+def issue_number(issue_date):
+    weeks, remainder = divmod((issue_date - dt.date(2026, 11, 22)).days, 7)
+    if weeks < 0 or remainder:
+        raise SystemExit("Issue date must be a Sunday on or after November 22, 2026")
+    return f"{weeks + 2:03d}"
+
+
+def issue_subject(subject, number):
+    headline = re.sub(r"^(?:\[Proof\]\s*)?The Sunday Jam(?:\s+#\d+)?\s*\|\s*",
+                      "", subject, flags=re.IGNORECASE).strip()
+    masthead = f"The Sunday Jam #{number}"
+    return f"{masthead} | {headline}" if headline else masthead
+
+
 def main():
     path = issue_path()
     issue_date = dt.date.fromisoformat(path.stem)
     issue = json.loads(path.read_text())
-    if issue_date.weekday() != 6:
-        raise SystemExit("Expected a Sunday issue date")
+    number = issue_number(issue_date)
     html = issue["html"]
     markers = ("This Week at Jam Lab", "Highest rated", "Lowest rated",
                "Archive pick", "The Latest Article", "The Rest of the Reviews",
@@ -124,7 +137,14 @@ def main():
     body = re.search(r"<body\b[^>]*>([\s\S]+)</body>", html, re.IGNORECASE)
     if not body:
         raise SystemExit("Issue is missing its HTML body")
-    blocks.feed(body.group(1))
+    newsletter_body, headings = re.subn(
+        r"(<h1\b[^>]*>\s*The Sunday Jam\s*</h1>)",
+        lambda match: f"{match.group(1)}<p>Issue #{number}</p>",
+        body.group(1), count=1, flags=re.IGNORECASE,
+    )
+    if headings != 1:
+        raise SystemExit("Issue is missing The Sunday Jam masthead")
+    blocks.feed(newsletter_body)
     blocks.flush()
     live = os.environ.get("SUNDAY_JAM_LIVE") == "true"
     name = f"The Sunday Jam | {issue_date}" + ("" if live else " | verified-editor proof")
@@ -156,7 +176,7 @@ def main():
         "name": name,
         "type": "regular",
         "groups": groups,
-        "emails": [{"subject": issue["subject"], "from_name": "Jam Laboratory",
+        "emails": [{"subject": issue_subject(issue["subject"], number), "from_name": "Jam Laboratory",
                     "from": "newsletter@jamlaboratory.com", "editor": "simple"}],
     }
     if existing_draft:
