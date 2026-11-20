@@ -16,21 +16,21 @@
 
 /* Homepage Sunday Jam embedded form */
 /* Make the MailerLite embed visually native to the compact homepage panel. */
-.jam-signup__form .ml-form-embedWrapper),
-.jam-signup__form .ml-form-embedBody),
-.jam-signup__form .ml-form-successBody),
-.jam-signup__form .ml-form-embedContainer),
+.jam-signup__form .ml-form-embedWrapper,
+.jam-signup__form .ml-form-embedBody,
+.jam-signup__form .ml-form-successBody,
+.jam-signup__form .ml-form-embedContainer,
 .jam-signup__form .ml-form-embedContent{background:transparent!important;background-color:transparent!important;border:0!important;box-shadow:none!important}
 .jam-signup__form .ml-form-embedWrapper{width:100%!important;max-width:100%!important}
-.jam-signup__form .ml-form-embedBody),
+.jam-signup__form .ml-form-embedBody,
 .jam-signup__form .ml-form-successBody{padding:0!important}
-.jam-signup__form .ml-form-embedContent h4),
-.jam-signup__form .ml-form-embedContent p),
-.jam-signup__form .ml-form-fieldRow label),
-.jam-signup__form .ml-form-checkboxRow label),
-.jam-signup__form .ml-form-successContent h4),
+.jam-signup__form .ml-form-embedContent h4,
+.jam-signup__form .ml-form-embedContent p,
+.jam-signup__form .ml-form-fieldRow label,
+.jam-signup__form .ml-form-checkboxRow label,
+.jam-signup__form .ml-form-successContent h4,
 .jam-signup__form .ml-form-successContent p{color:#f5f0e3!important}
-.jam-signup__form input[type="email"]),
+.jam-signup__form input[type="email"],
 .jam-signup__form .ml-form-fieldRow input{background:#fffdf8!important;color:#214b3b!important;border:1px solid #d7c9a5!important;border-radius:0!important;min-height:48px!important;padding:12px 14px!important;font:16px Josefin,sans-serif!important;width:100%!important}
 .jam-signup__form input[type="email"]:focus{outline:2px solid #e0c987!important;outline-offset:2px}
 .jam-signup__form .ml-form-embedSubmit button{background:#b69a55!important;color:#172f25!important;border:1px solid #b69a55!important;border-radius:0!important;min-height:48px!important;font:700 15px Josefin,sans-serif!important;letter-spacing:1px!important;cursor:pointer!important;width:100%!important}
