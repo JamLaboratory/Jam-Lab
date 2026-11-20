@@ -5,11 +5,11 @@ const featured=variant==='featured';
 <section class:list={['jam-signup',{'jam-signup--featured':featured}]} aria-label="Subscribe to The Sunday Jam">
   <div class="jam-signup__identity">
     <img src="/classic-listener.svg" alt="" width="88" height="86" loading="lazy" />
-    <div><div class="jam-signup__eyebrow">JAM LABORATORY PRESENTS · THE WEEKLY DISPATCH</div><h2>The Sunday Jam</h2><p class="jam-signup__tagline">{featured?'Good music. Better Sundays.':'Never Miss a Good Song.'}</p></div>
+    <div><div class="jam-signup__eyebrow">THE WEEKLY JAM LAB NEWSLETTER</div><h2>The Sunday Jam</h2><p class="jam-signup__tagline">{featured?'Good music. Better Sundays.':'Never Miss a Good Song.'}</p></div>
   </div>
-  <p class="jam-signup__description">{featured?'Reviews from the Lab, new discoveries, music news and the albums to watch. Delivered every Sunday morning.':'Enjoyed this piece? Get reviews, music discoveries and the latest from Jam Lab in your inbox every Sunday.'}</p>
+  <p class="jam-signup__description">{featured?'Music discoveries, album reviews and the week's best stories. Every Sunday morning.':'Enjoyed this piece? Get reviews, music discoveries and the latest from Jam Lab in your inbox every Sunday.'}</p>
   <div class="jam-signup__form"><div class="ml-embedded" data-form="I8UICD"></div></div>
-  <div class="jam-signup__bottom"><span>FREE TO READ · EVERY SUNDAY · NO SPAM</span><a href="/newsletter/">What's inside the newsletter?</a></div>
+  <div class="jam-signup__bottom"><span>FREE TO READ · EVERY SUNDAY · NO SPAM</span><a href="/newsletter/">Learn more</a></div>
 </section>
 <style>
 .jam-signup{--signup-green:#214b3b;--signup-gold:#b69a55;--signup-ivory:#f5f0e3;background:#faf7ef;border:1px solid var(--signup-gold);padding:clamp(1.35rem,4vw,2.25rem);margin:2.5rem 0;position:relative;overflow:hidden}
@@ -30,4 +30,27 @@ const featured=variant==='featured';
 .jam-signup__bottom a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 .jam-signup--featured .jam-signup__bottom{color:#f5f0e3}
 @media(max-width:520px){.jam-signup__identity img{width:58px}.jam-signup__eyebrow{font-size:9px;letter-spacing:1px}.jam-signup__bottom{font-size:10px}.jam-signup{margin:2rem 0}}
+
+/* Make the MailerLite embed visually native to the compact homepage panel. */
+.jam-signup__form :global(.ml-form-embedWrapper),
+.jam-signup__form :global(.ml-form-embedBody),
+.jam-signup__form :global(.ml-form-successBody),
+.jam-signup__form :global(.ml-form-embedContainer),
+.jam-signup__form :global(.ml-form-embedContent){background:transparent!important;background-color:transparent!important;border:0!important;box-shadow:none!important}
+.jam-signup__form :global(.ml-form-embedWrapper){width:100%!important;max-width:100%!important}
+.jam-signup__form :global(.ml-form-embedBody),
+.jam-signup__form :global(.ml-form-successBody){padding:0!important}
+.jam-signup__form :global(.ml-form-embedContent h4),
+.jam-signup__form :global(.ml-form-embedContent p),
+.jam-signup__form :global(.ml-form-fieldRow label),
+.jam-signup__form :global(.ml-form-checkboxRow label),
+.jam-signup__form :global(.ml-form-successContent h4),
+.jam-signup__form :global(.ml-form-successContent p){color:#f5f0e3!important}
+.jam-signup__form :global(input[type="email"]),
+.jam-signup__form :global(.ml-form-fieldRow input){background:#fffdf8!important;color:#214b3b!important;border:1px solid #d7c9a5!important;border-radius:0!important;min-height:48px!important;padding:12px 14px!important;font:16px Josefin,sans-serif!important;width:100%!important}
+.jam-signup__form :global(input[type="email"]:focus){outline:2px solid #e0c987!important;outline-offset:2px}
+.jam-signup__form :global(.ml-form-embedSubmit button){background:#b69a55!important;color:#172f25!important;border:1px solid #b69a55!important;border-radius:0!important;min-height:48px!important;font:700 15px Josefin,sans-serif!important;letter-spacing:1px!important;cursor:pointer!important;width:100%!important}
+.jam-signup__form :global(.ml-form-embedSubmit button:hover){background:#e0c987!important}
+.jam-signup--featured .jam-signup__form{max-width:550px}
+.jam-signup--featured .jam-signup__description{margin:.8rem 0 .5rem}
 </style>
