@@ -1,5 +1,7 @@
 import datetime as dt
 import json
+from html import unescape
+from html.parser import HTMLParser
 import os
 from pathlib import Path
 import re
@@ -58,6 +60,54 @@ def matching_records(path, name):
             path = url.path.removeprefix("/api/") + "?" + url.query
 
 
+class NewsletterBlocks(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.blocks = []
+        self.text = []
+        self.href = None
+        self.heading = False
+
+    def flush(self):
+        if any(node["text"].strip() for node in self.text):
+            self.blocks.append(("heading" if self.heading else "paragraph",
+                                {"content": self.text}))
+        self.text = []
+
+    def handle_starttag(self, tag, attributes):
+        attrs = dict(attributes)
+        if tag in {"h1", "h2", "h3", "p", "li", "td"}:
+            self.flush()
+            self.heading = tag.startswith("h")
+        elif tag == "img":
+            self.flush()
+            src = attrs.get("src", "")
+            if not src.startswith("https://"):
+                raise SystemExit("Newsletter images require HTTPS URLs")
+            self.blocks.append(("image", {"attrs": {"src": src, "alt": attrs.get("alt", "")}}))
+        elif tag == "a":
+            self.href = attrs.get("href")
+
+    def handle_endtag(self, tag):
+        if tag in {"h1", "h2", "h3", "p", "li", "td"}:
+            self.flush()
+            self.heading = False
+        elif tag == "a":
+            self.href = None
+        elif tag == "body":
+            self.flush()
+
+    def handle_data(self, value):
+        if self.href == "{$unsubscribe}":
+            return  # MailerLite's simple editor includes its own unsubscribe footer.
+        node = {"type": "text", "text": re.sub(r"\s+", " ", value)}
+        if self.href:
+            if not self.href.startswith("https://"):
+                raise SystemExit("Newsletter links require HTTPS URLs")
+            node["marks"] = [{"type": "link", "attrs": {"href": self.href}}]
+        self.text.append(node)
+
+
 def main():
     path = issue_path()
     issue_date = dt.date.fromisoformat(path.stem)
@@ -70,8 +120,14 @@ def main():
                "Around the Music World", "Five Albums on the Radar", "{$unsubscribe}")
     if len(html) < 2500 or any(marker not in html for marker in markers):
         raise SystemExit("Issue HTML is incomplete")
+    blocks = NewsletterBlocks()
+    body = re.search(r"<body\b[^>]*>([\s\S]+)</body>", html, re.IGNORECASE)
+    if not body:
+        raise SystemExit("Issue is missing its HTML body")
+    blocks.feed(body.group(1))
+    blocks.flush()
     live = os.environ.get("SUNDAY_JAM_LIVE") == "true"
-    name = f"The Sunday Jam | {issue_date}" + ("" if live else " | proof")
+    name = f"The Sunday Jam | {issue_date}" + ("" if live else " | verified-editor proof")
     groups = []
     send_at = None
     if live:
@@ -101,25 +157,32 @@ def main():
         "type": "regular",
         "groups": groups,
         "emails": [{"subject": issue["subject"], "from_name": "Jam Laboratory",
-                    "from": "newsletter@jamlaboratory.com", "content": html}],
+                    "from": "newsletter@jamlaboratory.com", "editor": "simple"}],
     }
     if existing_draft:
         campaign_id = existing_draft["id"]
-        api(f"campaigns/{campaign_id}", "PUT", payload)
+        api(f"campaigns/{campaign_id}", "PUT", {"name": name, "groups": groups})
     else:
         campaign_id = api("campaigns", "POST", payload)["data"]["id"]
     print(f"Created MailerLite draft {campaign_id}", flush=True)
     saved = api(f"campaigns/{campaign_id}")["data"]
     email, = saved["emails"]
-    if not email.get("is_designed"):
-        raise SystemExit("MailerLite did not confirm that the saved draft is designed")
-    if not live:
-        print("Proof draft saved. Use MailerLite's preview and Send a test; the campaign send was not called.")
-        return
+    email_path = f"emails/{email['id']}"
+    content = api(email_path)
+    etag = content["etag"]
+    for block in content["data"]["blocks"]:
+        etag = api(f"{email_path}/blocks/{block['id']}", "DELETE", {"etag": etag})["etag"]
+    for block_type, editor_content in blocks.blocks:
+        etag = api(f"{email_path}/blocks", "POST", {
+            "etag": etag, "type": block_type, "editor_content": editor_content,
+        })["etag"]
 
-    preview = api(f"emails/{email['id']}/html")["data"]["html"]
-    if any(marker not in preview for marker in markers[:-1]):
+    preview = unescape(api(f"{email_path}/html")["data"]["html"])
+    if any(marker not in preview for marker in markers):
         raise SystemExit("The saved MailerLite preview is missing required content")
+    if not live:
+        print("Verified saved MailerLite HTML. No email scheduled or sent.")
+        return
     timezones = [row for row in api("timezones")["data"]
                  if row["name"] == "America/Chicago"]
     if len(timezones) != 1:
