@@ -134,8 +134,8 @@ def main():
         chicago = ZoneInfo("America/Chicago")
         now = dt.datetime.now(chicago)
         send_at = dt.datetime.combine(issue_date, dt.time(8), chicago)
-        if now.date() != issue_date - dt.timedelta(days=1):
-            raise SystemExit("Production scheduling is allowed only on Saturday before the issue")
+        if not dt.timedelta() < send_at - now <= dt.timedelta(days=3):
+            raise SystemExit("Production scheduling requires a Sunday within the next three days")
         matches = list(matching_records("groups?limit=100", "The Sunday Jam"))
         if len(matches) != 1:
             raise SystemExit("Expected exactly one Sunday Jam subscriber group")
