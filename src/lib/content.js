@@ -3,6 +3,26 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "amble-reverie",
+  "artist": "Amble",
+  "album": "Reverie",
+  "year": 2025,
+  "genre": "Irish Folk",
+  "published": "2026-11-19",
+  "cover": "https://artwork.jamlaboratory.com/uploads/385e0d86-381c-4f25-b6c3-19214dde8c9d.jpg",
+  "scores": {
+    "composition": 9.5,
+    "writing": 10,
+    "performance": 9.7,
+    "production": 9,
+    "intangibles": 8.5
+  },
+  "body": [
+    "Rarely have I been this blown away by a debut effort. Amble’s Reverie is a triumphant success in nearly every facet. The Irish trio manage to weave together beautiful collaborative writing and classic Irish instrumentation while keeping a very fresh and ultimately timeless sound. “Mariner Boy” and “Mary’s Pub” are absolute winners, but nearly every track coats your brain with a peaceful and occasionally longing folklore.",
+    "I have not been this excited about a new musical group in a long time."
+  ]
+},{
+
   "slug": "mastodon-marrow-deep",
   "artist": "Mastodon",
   "album": "Marrow Deep",
