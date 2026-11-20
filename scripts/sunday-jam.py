@@ -11,10 +11,13 @@ from zoneinfo import ZoneInfo
 
 
 def api(path, method="GET", payload=None):
+    token = os.environ["MAILERLITE_API_TOKEN"].strip()
+    if not re.fullmatch(r"[A-Za-z0-9._~+/=-]{32,}", token):
+        raise SystemExit("MAILERLITE_API_TOKEN is missing or malformed")
     request = Request(
         "https://connect.mailerlite.com/api/" + path,
         data=None if payload is None else json.dumps(payload).encode(),
-        headers={"Authorization": "Bearer " + os.environ["MAILERLITE_API_TOKEN"],
+        headers={"Authorization": "Bearer " + token,
                  "Accept": "application/json", "Content-Type": "application/json"},
         method=method,
     )
@@ -116,12 +119,15 @@ def main():
         print("Verified proof draft; no recipient group assigned")
         return
 
-    utc_send = send_at.astimezone(dt.timezone.utc)
-    # The account's timezone must be verified as UTC before enabling live sends.
+    timezones = [row for row in api("timezones")["data"]
+                 if row["name"] == "America/Chicago"]
+    if len(timezones) != 1:
+        raise SystemExit("MailerLite did not return exactly one America/Chicago timezone")
     api(f"campaigns/{campaign_id}/schedule", "POST", {
         "delivery": "scheduled",
-        "schedule": {"date": utc_send.strftime("%Y-%m-%d"),
-                     "hours": utc_send.strftime("%H"), "minutes": "00"},
+        "schedule": {"date": send_at.strftime("%Y-%m-%d"),
+                     "hours": "08", "minutes": "00",
+                     "timezone_id": int(timezones[0]["id"])},
     })
     print(f"Scheduled campaign {campaign_id} for {send_at.isoformat()}")
 
