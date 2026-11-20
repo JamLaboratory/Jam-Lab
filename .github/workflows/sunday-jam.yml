@@ -1,0 +1,30 @@
+name: Sunday Jam
+on:
+  workflow_dispatch:
+    inputs:
+      issue_date:
+        description: Sunday issue date (YYYY-MM-DD)
+        required: true
+        type: string
+  push:
+    paths:
+      - 'newsletters/sunday-jam/*.json'
+permissions:
+  contents: read
+concurrency:
+  group: sunday-jam
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      MAILERLITE_API_TOKEN: ${{ secrets.MAILERLITE_API_TOKEN }}
+      SUNDAY_JAM_LIVE: ${{ vars.SUNDAY_JAM_LIVE }}
+      ISSUE_DATE: ${{ inputs.issue_date }}
+      BEFORE_SHA: ${{ github.event.before }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: python3 scripts/sunday-jam.py
