@@ -3,6 +3,27 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "beartooth-pure-ecstasy",
+  "artist": "Beartooth",
+  "album": "Pure Ecstasy",
+  "year": null,
+  "genre": "Metalcore / Hard Rock",
+  "published": "2026-11-20",
+  "cover": "https://artwork.jamlaboratory.com/uploads/f555b688-efef-4d2e-b17c-ee797eecb8d8.jpg",
+  "scores": {
+    "composition": 2.9,
+    "writing": 3.5,
+    "performance": 5.7,
+    "production": 1.8,
+    "intangibles": 5
+  },
+  "body": [
+    "After Beartooth released *Disease*, I felt they would quickly skyrocket up my list of favorite hard rock and metal bands. However, subsequent releases have consistently fallen flatter than their predecessors.",
+    "I fear *Pure Ecstasy* represents the biggest drop in quality thus far. Although Caleb Shomo still has unbelievable chops, some of the production decisions and songwriting choices are questionable at best. The introduction of synthetic elements feels unserious and sticks out like a sore thumb.",
+    "Fortunately, I still have four or five incredible releases from this band that I can always go back to."
+  ]
+},{
+
   "slug": "karnivool-asymmetry",
   "artist": "Karnivool",
   "album": "Asymmetry",
