@@ -3,6 +3,27 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "alter-bridge-walk-the-sky",
+  "artist": "Alter Bridge",
+  "album": "Walk the Sky",
+  "year": 2019,
+  "genre": "Hard Rock / Alternative Metal",
+  "published": "2026-11-20",
+  "cover": "https://artwork.jamlaboratory.com/uploads/2945e8c8-6075-4b4d-bcf3-568e9e6d8a38.jpg",
+  "scores": {
+    "composition": 9,
+    "writing": 9.3,
+    "performance": 8.4,
+    "production": 7.6,
+    "intangibles": 8.2
+  },
+  "body": [
+    "Alter Bridge stepped into their next project in the height of their career in Walk the Sky. As readers may well know, I’m not shy about my fondness towards this band. However, to give the devil his due, this record falls short compared to the first four releases, which arguably is one of the strongest runs in rock/metal. ",
+    "Walk the Sky continues Mark and Myles incredible writing and composition, though lacks the tenderness and sensitivity that made earlier releases so special. “Dying Light” is a masterclass in power ballad, and “The Bitter End” showcases Myles’ writing at its best. ",
+    "An excellent effort all things considered, but doesn’t quite leapfrog the earlier releases. "
+  ]
+},{
+
   "slug": "the-smiths-the-smiths",
   "artist": "The Smiths",
   "album": "The Smiths",
