@@ -3,6 +3,26 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "knuckle-puck-copacetic",
+  "artist": "Knuckle Puck",
+  "album": "Copacetic",
+  "year": 2015,
+  "genre": "Pop Punk / Emo",
+  "published": "2026-11-20",
+  "cover": "https://artwork.jamlaboratory.com/uploads/ff5b53b3-0528-418a-949e-ad5ccb7fbf7f.jpg",
+  "scores": {
+    "composition": 9.5,
+    "writing": 9.1,
+    "performance": 9.9,
+    "production": 9.5,
+    "intangibles": 8.7
+  },
+  "body": [
+    "In a new era of pop punk, Knuckle Puck demonstrate with this release that they are leading the way. Blistering guitar tones and outstanding vocals showcase the band's chops throughout the album.",
+    "“Untitled” and “Pretense” are two of the best punk tracks of the decade. Now surpassing its tenth anniversary, *Copacetic* demonstrates why, to me, Knuckle Puck have been at the forefront of the modern pop-punk movement. This album represents a milestone in the scene and deserves to be heard by every fan of the genre."
+  ]
+},{
+
   "slug": "american-football-american-football",
   "artist": "American Football",
   "album": "American Football",
