@@ -3,6 +3,26 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "death-cab-for-cutie-i-built-you-a-tower",
+  "artist": "Death Cab for Cutie",
+  "album": "I Built You A Tower",
+  "year": 2026,
+  "genre": "Indie Rock",
+  "published": "2026-11-19",
+  "cover": "https://artwork.jamlaboratory.com/uploads/5fbce2b2-099c-412d-93d0-8a1f22ca9358.jpg",
+  "scores": {
+    "composition": 6,
+    "writing": 6.4,
+    "performance": 4.5,
+    "production": 5,
+    "intangibles": 3.1
+  },
+  "body": [
+    "An independent band, now well established two decades plus in their career, Death Cab throw their hat in the ring with I Build You A Tower. Things have polished up quite a bit since their 2000s heyday, though at times the genius of Ben Gibbard shows nicely. “Punching the Flowers” is a great example—fun writing and slick composition makes that track the clear winner.",
+    "However, much is left to be desired with a bit of a flat latter half, but DCFC remain firm in their influence, nonetheless."
+  ]
+},{
+
   "slug": "goose-big-modern",
   "artist": "Goose",
   "album": "BIG MODERN!",
