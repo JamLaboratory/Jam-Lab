@@ -1,7 +1,7 @@
 ---
 import '../styles/site.css';
 const {title='Home',description='Jam Lab is an independent music journal.'}=Astro.props;
-const nav=[['Home','/'],['Reviews','/reviews/'],['Articles','/articles/'],['Rankings','/rankings/'],['Podcast','/podcast/'],['About','/about/']];
+const nav=[['Home','/'],['Reviews','/reviews/'],['Articles','/articles/'],['Rankings','/rankings/'],['Podcast','/podcast/'],['Newsletter','/newsletter/'],['About','/about/']];
 const path=Astro.url.pathname;
 ---
 <!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="description" content={description}/><link rel="canonical" href={new URL(path,Astro.site)}/><title>{title==='Home'?'Jam Laboratory':`${title} | Jam Lab`}</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"/><script is:inline>
