@@ -183,15 +183,21 @@ def main():
     if not live:
         print("Verified saved MailerLite HTML. No email scheduled or sent.")
         return
-    timezones = [row for row in api("timezones")["data"]
-                 if row["name"] == "America/Chicago"]
-    if len(timezones) != 1:
-        raise SystemExit("MailerLite did not return exactly one America/Chicago timezone")
+    zones = api("timezones")["data"]
+    central = next((row for row in zones if row["name"] in
+                    {"America/Chicago", "US/Central", "Central Time (US & Canada)"}), None)
+    utc = next((row for row in zones if row["name"] in
+                {"UTC", "Etc/UTC", "GMT", "Etc/GMT", "Coordinated Universal Time"}), None)
+    timezone = central or utc
+    if not timezone:
+        options = [row["name"] for row in zones if row.get("offset") in {0, -300, -360}]
+        raise SystemExit(f"No known timezone label; relevant MailerLite options: {options}")
+    scheduled_time = send_at if central else send_at.astimezone(dt.timezone.utc)
     api(f"campaigns/{campaign_id}/schedule", "POST", {
         "delivery": "scheduled",
-        "schedule": {"date": send_at.strftime("%Y-%m-%d"),
-                     "hours": "08", "minutes": "00",
-                     "timezone_id": int(timezones[0]["id"])},
+        "schedule": {"date": scheduled_time.strftime("%Y-%m-%d"),
+                     "hours": scheduled_time.strftime("%H"), "minutes": "00",
+                     "timezone_id": int(timezone["id"])},
     })
     print(f"Scheduled campaign {campaign_id} for {send_at.isoformat()}")
 
