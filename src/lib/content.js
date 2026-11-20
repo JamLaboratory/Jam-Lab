@@ -3,6 +3,27 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "goose-big-modern",
+  "artist": "Goose",
+  "album": "BIG MODERN!",
+  "year": 2026,
+  "genre": "Jam Rock",
+  "published": "2026-11-19",
+  "cover": "https://artwork.jamlaboratory.com/uploads/9bcb7630-7263-4e60-a343-f1a7ccc50953.png",
+  "scores": {
+    "composition": 8.6,
+    "writing": 7.5,
+    "performance": 9.8,
+    "production": 9.8,
+    "intangibles": 9.9
+  },
+  "body": [
+    "On pace to be one of the most interesting acts of the decade, Goose quickly release BIG MODERN! shortly after a stint of two releases in 2025. The neon coloring of the record aligns with the synth heavy pop-driven soundscapes of the record. Yet the classic Goose sound is of course not lost.",
+    "Stand-outs include “GOOD2B” and the title track.",
+    "The record is upbeat, jam-heavy, catchy, but complex is in its own way. Goose continue to dominate the jam band scene and lead 2026 with a phenomenal effort to back their tour-dense schedule."
+  ]
+},{
+
   "slug": "amble-reverie",
   "artist": "Amble",
   "album": "Reverie",
