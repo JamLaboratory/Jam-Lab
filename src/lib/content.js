@@ -3,6 +3,26 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "meshuggah-obzen",
+  "artist": "Meshuggah",
+  "album": "obZen",
+  "year": 2008,
+  "genre": "Progressive / Extreme Metal",
+  "published": "2026-11-19",
+  "cover": "https://artwork.jamlaboratory.com/uploads/cf67113d-bf1a-4f84-b187-d982c8669313.jpg",
+  "scores": {
+    "composition": 8.7,
+    "writing": 6,
+    "performance": 9.6,
+    "production": 8.8,
+    "intangibles": 9.5
+  },
+  "body": [
+    "Please keep your arms and legs inside the vehicle at all times…obZen will probably make your pineal gland fry (whether that’s a good thing or a bad thing is user-dependent.)",
+    "Meshuggah flex their prog muscles as hard as possible in this iconic effort. “Bleed” remains an extreme metal classic, but “Pineal Gland Optics” truly deserves some attention after nearly two decades. An incredibly forceful album best suited for the gym or a HIIT run. Maybe keep it on the shelf when the in-laws are in town."
+  ]
+},{
+
   "slug": "death-cab-for-cutie-i-built-you-a-tower",
   "artist": "Death Cab for Cutie",
   "album": "I Built You A Tower",
