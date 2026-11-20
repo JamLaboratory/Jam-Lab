@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="The Sunday Jam" description="Subscribe to The Sunday Jam, Jam Laboratory's weekly newsletter of album reviews, music news and upcoming releases.">
+<section class="newsletter-page" aria-labelledby="newsletter-title">
+  <div class="newsletter-heading"><img src="/classic-listener.svg" alt="" width="110" height="108"/><div><div class="kicker">THE WEEKLY JAM LAB NEWSLETTER</div><h1 id="newsletter-title">The Sunday Jam</h1></div></div>
+  <p class="intro">No Good Song Left Behind.</p>
+  <p>Join us every Sunday morning for a weekly dispatch from Jam Laboratory: the highest- and lowest-rated reviews of the week, an archival pick, our latest article, and the rest of the week's ratings.</p>
+  <p>Then go <strong>Beyond the Lab</strong> for notable music news and five upcoming albums worth keeping an ear on.</p>
+  <div class="signup"><h2>Get The Sunday Jam</h2><p>Free, delivered to your inbox every Sunday. Subscribe below.</p><div class="ml-embedded" data-form="I8UICD"></div></div>
+</section>
+<style>
+.newsletter-page{max-width:850px;margin:2rem auto 4rem;color:#214B3B}.newsletter-heading{display:flex;align-items:center;gap:1.25rem}.newsletter-heading img{width:90px;height:90px;object-fit:contain}.newsletter-page h1{margin:.2rem 0;font-size:clamp(2rem,5vw,3.5rem);color:#214B3B}.newsletter-page>p{line-height:1.75;max-width:720px}.newsletter-page .intro{font-style:italic;font-size:1.2rem;color:#B69A55}.signup{margin-top:2rem;padding:clamp(1.25rem,4vw,2.5rem);background:#F5F0E3;border:1px solid #B69A55}.signup h2{color:#214B3B;margin-top:0}.signup .ml-embedded{margin-top:1rem}@media(max-width:500px){.newsletter-heading img{width:65px;height:65px}}
+</style>
+</Base>
