@@ -4,7 +4,10 @@ const {title='Home',description='Jam Lab is an independent music journal.'}=Astr
 const nav=[['Home','/'],['Reviews','/reviews/'],['Articles','/articles/'],['Rankings','/rankings/'],['Podcast','/podcast/'],['About','/about/']];
 const path=Astro.url.pathname;
 ---
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="description" content={description}/><link rel="canonical" href={new URL(path,Astro.site)}/><title>{title==='Home'?'Jam Laboratory':`${title} | Jam Lab`}</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"/></head><body>
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="description" content={description}/><link rel="canonical" href={new URL(path,Astro.site)}/><title>{title==='Home'?'Jam Laboratory':`${title} | Jam Lab`}</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"/><script is:inline>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};l=d.createElement(e);l.async=1;l.src=u;n=d.getElementsByTagName(e)[0];n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account','2810694');
+</script></head><body>
 <header class="masthead"><div class="eyebrow">AN INDEPENDENT MUSIC JOURNAL <span>✦</span> EST. MMXXVI</div><a class="wordmark" href="/" aria-label="Jam Laboratory home"><span>JAM</span><img class="masthead-listener" src="/classic-listener.svg" alt="" width="680" height="665"/><span>LABORATORY</span></a><div class="tagline">No Good Song Left Behind.</div></header>
 <nav class="mainnav" aria-label="Main navigation"><div class="navinner">{nav.map(([label,url])=><a href={url} class:list={{active:path===url||(url!=='/'&&path.startsWith(url))}}>{label}</a>)}</div></nav>
 <main><slot/></main><footer><div class="footercontent"><strong>JAM LAB</strong><span>No Good Song Left Behind.</span><span>© {new Date().getFullYear()} Jam Lab</span></div></footer>
