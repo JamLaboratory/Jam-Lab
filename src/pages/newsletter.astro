@@ -1,15 +1,71 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base title="The Sunday Jam" description="Subscribe to The Sunday Jam, Jam Laboratory's weekly newsletter of album reviews, music news and upcoming releases.">
-<section class="newsletter-page" aria-labelledby="newsletter-title">
-  <div class="newsletter-heading"><img src="/classic-listener.svg" alt="" width="110" height="108"/><div><div class="kicker">THE WEEKLY JAM LAB NEWSLETTER</div><h1 id="newsletter-title">The Sunday Jam</h1></div></div>
-  <p class="intro">No Good Song Left Behind.</p>
-  <p>Join us every Sunday morning for a weekly dispatch from Jam Laboratory: the highest- and lowest-rated reviews of the week, an archival pick, our latest article, and the rest of the week's ratings.</p>
-  <p>Then go <strong>Beyond the Lab</strong> for notable music news and five upcoming albums worth keeping an ear on.</p>
-  <div class="signup"><h2>Get The Sunday Jam</h2><p>Free, delivered to your inbox every Sunday. Subscribe below.</p><div class="ml-embedded" data-form="I8UICD"></div></div>
-</section>
-<style>
-.newsletter-page{max-width:850px;margin:2rem auto 4rem;color:#214B3B}.newsletter-heading{display:flex;align-items:center;gap:1.25rem}.newsletter-heading img{width:90px;height:90px;object-fit:contain}.newsletter-page h1{margin:.2rem 0;font-size:clamp(2rem,5vw,3.5rem);color:#214B3B}.newsletter-page>p{line-height:1.75;max-width:720px}.newsletter-page .intro{font-style:italic;font-size:1.2rem;color:#B69A55}.signup{margin-top:2rem;padding:clamp(1.25rem,4vw,2.5rem);background:#F5F0E3;border:1px solid #B69A55}.signup h2{color:#214B3B;margin-top:0}.signup .ml-embedded{margin-top:1rem}@media(max-width:500px){.newsletter-heading img{width:65px;height:65px}}
-</style>
+<Base title="The Sunday Jam" description="Subscribe to The Sunday Jam, Jam Laboratory's weekly music newsletter.">
+  <section class="newsletter-page" aria-labelledby="newsletter-title">
+    <header class="newsletter-intro">
+      <div class="newsletter-kicker">JAM LABORATORY · THE WEEKLY DISPATCH</div>
+      <img class="newsletter-listener" src="/classic-listener.svg" alt="" width="120" height="118" />
+      <h1 id="newsletter-title">The Sunday Jam</h1>
+      <p class="newsletter-tagline">Good music. Better Sundays.</p>
+      <div class="newsletter-divider" aria-hidden="true">✦</div>
+      <p class="newsletter-lead">A Sunday morning ritual for people who believe there's always another great record to discover.</p>
+    </header>
+    <div class="newsletter-layout">
+      <div class="newsletter-editorial">
+        <div class="newsletter-kicker">INSIDE EVERY ISSUE</div>
+        <h2>From the Lab.<br />Beyond the Lab.</h2>
+        <div class="newsletter-section"><span class="newsletter-number">01</span><div><h3>This Week at Jam Lab</h3><p>The week's highest and lowest album scores, a selection from the archives, our latest writing, and the rest of the reviews.</p></div></div>
+        <div class="newsletter-section"><span class="newsletter-number">02</span><div><h3>Beyond the Lab</h3><p>Noteworthy music news and five upcoming releases to keep on your radar.</p></div></div>
+        <p class="newsletter-signoff">No Good Song Left Behind.</p>
+      </div>
+      <aside class="newsletter-subscribe" aria-label="Sunday Jam email signup">
+        <div class="newsletter-subscribe-inner">
+          <div class="newsletter-subscribe-kicker">YOUR WEEKLY MUSIC FIX</div>
+          <h2>Join the List.</h2>
+          <p>Delivered every Sunday morning, straight to your inbox.</p>
+          <div class="newsletter-mailerlite"><div class="ml-embedded" data-form="I8UICD"></div></div>
+          <div class="newsletter-fineprint">FREE TO READ · EVERY SUNDAY · NO SPAM</div>
+        </div>
+      </aside>
+    </div>
+  </section>
 </Base>
+<style>
+.newsletter-page{max-width:1080px;margin:1rem auto 4rem}
+.newsletter-intro{text-align:center;max-width:760px;margin:0 auto 3.5rem}
+.newsletter-kicker,.newsletter-subscribe-kicker{font:700 12px/1.5 Josefin,sans-serif;letter-spacing:2px;color:#8d7038}
+.newsletter-listener{display:block;width:92px;height:auto;margin:1.3rem auto .4rem}
+.newsletter-intro h1{font-size:clamp(3rem,7vw,5.7rem);margin:.2rem 0;color:#214b3b}
+.newsletter-tagline{font-size:clamp(1.25rem,2.8vw,1.65rem);font-style:italic;color:#8d7038;margin:0}
+.newsletter-divider{display:flex;align-items:center;gap:1rem;justify-content:center;color:#b69a55;margin:1.3rem auto}
+.newsletter-divider:before,.newsletter-divider:after{content:"";height:1px;background:#b69a55;width:80px}
+.newsletter-lead{font-size:clamp(1.1rem,2vw,1.35rem);line-height:1.65;color:#44483c}
+.newsletter-layout{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,5vw,4rem);align-items:start}
+.newsletter-editorial{padding:1.1rem 0}
+.newsletter-editorial h2{font-size:clamp(2rem,4vw,3.1rem);margin:.65rem 0 2rem}
+.newsletter-section{display:flex;gap:1rem;border-top:1px solid #d8d0bc;padding:1.3rem 0}
+.newsletter-number{font:28px AnchorJack,Georgia,serif;color:#b69a55}
+.newsletter-section h3{font-size:1.5rem;margin:0 0 .6rem}
+.newsletter-section p{font-size:1rem;line-height:1.65;color:#55584c;margin:0}
+.newsletter-signoff{font-style:italic;color:#8d7038;margin:1.5rem 0}
+.newsletter-subscribe{background:#214b3b;color:#f5f0e3;border:3px solid #b69a55;padding:8px;box-shadow:0 12px 30px rgba(33,75,59,.12)}
+.newsletter-subscribe-inner{border:1px solid rgba(245,240,227,.38);padding:clamp(1.3rem,3vw,2.2rem)}
+.newsletter-subscribe-kicker{color:#e0c987}
+.newsletter-subscribe h2{color:#f5f0e3;font-size:clamp(2rem,4vw,3rem);margin:.7rem 0 1rem}
+.newsletter-subscribe p{line-height:1.6;color:#f5f0e3}
+.newsletter-fineprint{font:700 10px/1.6 Josefin,sans-serif;letter-spacing:1px;color:#e0c987;text-align:center;margin-top:1.5rem}
+.newsletter-mailerlite{margin-top:1rem;min-height:90px}
+/* Style the existing MailerLite embed without changing its form ID or submission behavior. */
+.newsletter-mailerlite :global(.ml-form-embedWrapper),.newsletter-mailerlite :global(.ml-form-embedBody),.newsletter-mailerlite :global(.ml-form-successBody),.newsletter-mailerlite :global(.ml-form-embedContainer),.newsletter-mailerlite :global(.ml-form-embedContent){background:transparent!important;background-color:transparent!important;box-shadow:none!important;border:0!important}
+.newsletter-mailerlite :global(.ml-form-embedWrapper){max-width:100%!important;width:100%!important}
+.newsletter-mailerlite :global(.ml-form-embedBody),.newsletter-mailerlite :global(.ml-form-successBody){padding:0!important}
+.newsletter-mailerlite :global(.ml-form-embedContent h4),.newsletter-mailerlite :global(.ml-form-embedContent p){color:#f5f0e3!important}
+.newsletter-mailerlite :global(.ml-form-fieldRow input),.newsletter-mailerlite :global(input[type="email"]){background:#fffdf8!important;color:#214b3b!important;border:1px solid #d7c9a5!important;border-radius:0!important;font:16px Josefin,sans-serif!important;min-height:50px!important;padding:12px 14px!important;width:100%!important}
+.newsletter-mailerlite :global(.ml-form-fieldRow input:focus),.newsletter-mailerlite :global(input[type="email"]:focus){outline:2px solid #e0c987!important;outline-offset:2px}
+.newsletter-mailerlite :global(.ml-form-embedSubmit button),.newsletter-mailerlite :global(button.primary){background:#b69a55!important;color:#172f25!important;border:1px solid #b69a55!important;border-radius:0!important;font:700 15px Josefin,sans-serif!important;letter-spacing:1.5px!important;min-height:50px!important;width:100%!important;cursor:pointer!important}
+.newsletter-mailerlite :global(.ml-form-embedSubmit button:hover){background:#e0c987!important}
+.newsletter-mailerlite :global(.ml-form-fieldRow label),.newsletter-mailerlite :global(.ml-form-checkboxRow label),.newsletter-mailerlite :global(.ml-form-successContent h4),.newsletter-mailerlite :global(.ml-form-successContent p){color:#f5f0e3!important}
+@media(max-width:760px){.newsletter-layout{grid-template-columns:1fr}.newsletter-intro{margin-bottom:2rem}.newsletter-editorial{padding:0}.newsletter-subscribe{max-width:560px;width:100%;margin:auto}}
+@media(max-width:480px){.newsletter-intro h1{font-size:clamp(2.6rem,11vw,3.6rem)}.newsletter-subscribe-inner{padding:1.2rem}.newsletter-listener{width:74px}}
+</style>
