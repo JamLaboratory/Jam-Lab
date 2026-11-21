@@ -3,6 +3,26 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "megadeth-the-sick-the-dying-and-the-dead",
+  "artist": "Megadeth",
+  "album": "The Sick, the Dying... and the Dead!",
+  "year": 2022,
+  "genre": "Thrash Metal / Heavy Metal",
+  "published": "2026-11-20",
+  "cover": "https://artwork.jamlaboratory.com/uploads/cc1ae125-a0dc-4b2a-b5a4-dfac3ddb365f.jpg",
+  "scores": {
+    "composition": 7.4,
+    "writing": 5.3,
+    "performance": 7.8,
+    "production": 9.5,
+    "intangibles": 5
+  },
+  "body": [
+    "Megadeth have done an impressive job of maintaining their classic thrash sound throughout the decades. Following *Dystopia*, fans have had good reason to feel confident that subsequent releases would preserve the band's signature sound without compromising the qualities that have made them such an iconic force in metal.",
+    "With that in mind, *The Sick, the Dying... and the Dead!* does not disappoint. The album delivers blistering guitar solos and classic thrash energy throughout. While there's nothing particularly novel or groundbreaking here, the record is well worth a listen for Megadeth fans of any level."
+  ]
+},{
+
   "slug": "knuckle-puck-copacetic",
   "artist": "Knuckle Puck",
   "album": "Copacetic",
