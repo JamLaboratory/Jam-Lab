@@ -3,6 +3,28 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "goo-goo-dolls-dizzy-up-the-girl",
+  "artist": "Goo Goo Dolls",
+  "album": "Dizzy Up the Girl",
+  "year": 1998,
+  "genre": "Alternative Rock / Post-Grunge",
+  "published": "2026-11-22",
+  "cover": "https://artwork.jamlaboratory.com/uploads/556c1309-9717-4772-ba4b-178637bf5d94.jpg",
+  "scores": {
+    "composition": 8.3,
+    "writing": 8.9,
+    "performance": 7.8,
+    "production": 8,
+    "intangibles": 7.7
+  },
+  "body": [
+    "Goo Goo Dolls’ *Dizzy Up the Girl* remains a ’90s post-grunge staple, with classics including “Slide” and the mammoth “Iris” leading the charge. Other excellent tracks include “Broadway” and “Black Balloon,” though the album’s consistency can be frustrating at times.",
+    "The Dolls excel with clean guitar tones and acoustic-based songwriting. However, a handful of tracks driven by heavier electric riffing lack that same tender strength, and the occasional shift away from Johnny Rzeznik’s lead vocals simply doesn’t work as well.",
+    "This record represents a period in which vocal duties were shared between Rzeznik and bassist Robby Takac, whose contributions provide a noticeably different sound.",
+    "Despite its mild inconsistencies, *Dizzy Up the Girl* remains an iconic album in many ways and is well worth a full listen for any fan of ’90s rock."
+  ]
+},{
+
   "slug": "megadeth-the-sick-the-dying-and-the-dead",
   "artist": "Megadeth",
   "album": "The Sick, the Dying... and the Dead!",
