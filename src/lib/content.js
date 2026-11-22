@@ -3,6 +3,28 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "alter-bridge-fortress",
+  "artist": "Alter Bridge",
+  "album": "Fortress",
+  "year": 2013,
+  "genre": "Hard Rock / Alternative Metal / Progressive Metal",
+  "published": "2026-11-22",
+  "cover": "https://artwork.jamlaboratory.com/uploads/42031995-6f4b-4c0c-a90d-bb3cd23a9bb1.jpg",
+  "scores": {
+    "composition": 10,
+    "writing": 10,
+    "performance": 10,
+    "production": 9.8,
+    "intangibles": 10
+  },
+  "body": [
+    "Only a handful of times in one's life will a new album or artist truly change it.",
+    "Alter Bridge's *Fortress* represents the apex of what post-grunge can be. From the soaring choruses and flawless performances by Myles, Mark, Scott, and Brian to the profound lyrical expression, this record is extraordinary. The guitar solos mesh expertly with the skeletons of the songs, while the interplay between acoustic, lead, and rhythm elements is consistently intricate and beautiful.",
+    "“Cry of Achilles” is a masterpiece, from its almost Spanish-influenced introduction to its cathartic chorus. “Fortress” is an opus, second only to “Blackbird.”",
+    "I could write a novel about this album, but I'll keep it simple: **10/10.**"
+  ]
+},{
+
   "slug": "tyler-childers-live-on-red-barn-radio-i-and-ii",
   "artist": "Tyler Childers",
   "album": "Live on Red Barn Radio I & II",
