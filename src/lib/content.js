@@ -3,6 +3,28 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "trivium-crown-in-the-grave",
+  "artist": "Trivium",
+  "album": "Crown in the Grave",
+  "year": 2026,
+  "genre": "Heavy Metal / Metalcore",
+  "published": "2026-11-22",
+  "cover": "https://artwork.jamlaboratory.com/uploads/1f4fc3a8-d059-4720-97ac-83c885317c10.webp",
+  "scores": {
+    "composition": 7,
+    "writing": 2.6,
+    "performance": 8.8,
+    "production": 8,
+    "intangibles": 6
+  },
+  "body": [
+    "The thrash legends are well into their third decade of commercial releases as *Crown in the Grave* arrives. Matt Heafy and the boys have demonstrated their relevance across multiple decades, with *Ascendancy* (2005), *The Sin and the Sentence* (2017), and *In the Court of the Dragon* (2021) all lending credence to that longevity.",
+    "I look forward to every Trivium release, though this record feels like a less assured version of *In the Court of the Dragon*, released five years earlier.",
+    "The title track is an excellent glimpse into what the band does best: hybrid vocal styles, cruising guitars, and overall thrash godliness. The writing, however, feels like a weak point. In a genre where lyrics can play an important role, Trivium occasionally come across as cheesy and unconvincing. “Death Throes” and “Serpent in the Flame” are two of the stronger tracks, but songs like “Paradise of Sinners” can feel almost comical and unserious.",
+    "Production and performance remain strong elements of Trivium’s body of work, as we've come to expect. Overall, however, this album feels like it's on the precipice of being good without quite crossing that threshold, held back by weaker lyricism and compositions that fall short of the potential the band has demonstrated over the past three decades."
+  ]
+},{
+
   "slug": "goo-goo-dolls-dizzy-up-the-girl",
   "artist": "Goo Goo Dolls",
   "album": "Dizzy Up the Girl",
