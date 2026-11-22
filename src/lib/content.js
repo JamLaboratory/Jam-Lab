@@ -3,6 +3,27 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "tyler-childers-live-on-red-barn-radio-i-and-ii",
+  "artist": "Tyler Childers",
+  "album": "Live on Red Barn Radio I & II",
+  "year": 2018,
+  "genre": "Country / Americana / Appalachian Folk",
+  "published": "2026-11-22",
+  "cover": "https://artwork.jamlaboratory.com/uploads/34a8f364-3bdb-4a01-8508-81dd4ec3f24d.jpg",
+  "scores": {
+    "composition": 8,
+    "writing": 9.8,
+    "performance": 9.5,
+    "production": 8.5,
+    "intangibles": 9
+  },
+  "body": [
+    "In the late 2010s, Tyler Childers somehow managed to combine elements of classic folk and Appalachian mountain music to earn massive praise and a well-deserved following. This live record is a perfect encapsulation of what the Southern singer-songwriter does best.",
+    "“Shake the Frost” and “Follow You to Virgie” are two of the strongest country-folk songs of the decade from a pure songwriting standpoint. This stripped-down album contains the raw emotion that I believe these songs were always intended to convey. Although his studio records are absolutely worth a listen, this kind of music is served best on a live platter.",
+    "With a spectrum of emotions on display, ranging from melancholy and tragedy to joy, Tyler Childers offers a perfect Dollar Tree-sized sample of what makes his art so meaningful and universally praised."
+  ]
+},{
+
   "slug": "trivium-crown-in-the-grave",
   "artist": "Trivium",
   "album": "Crown in the Grave",
