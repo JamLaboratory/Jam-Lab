@@ -3,6 +3,27 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "pinback-blue-screen-life",
+  "artist": "Pinback",
+  "album": "Blue Screen Life",
+  "year": 2001,
+  "genre": "Indie Rock / Math Rock / Alternative Rock",
+  "published": "2026-11-23",
+  "cover": "https://artwork.jamlaboratory.com/uploads/a744ce7e-b366-4eac-8b5a-fddcff3e4890.jpg",
+  "scores": {
+    "composition": 9.6,
+    "writing": 7.5,
+    "performance": 8,
+    "production": 8,
+    "intangibles": 5
+  },
+  "body": [
+    "Harboring one of the more intriguing sounds in independent music, Pinback released their sophomore album, *Blue Screen Life*, in 2001, offering a perfect glimpse into what makes the band so unique.",
+    "Pinback's defining sound lies in the clean guitar riffs that intertwine with basslines throughout the album. Together, they almost develop a musical counterpoint, keeping listeners engaged and interested. Vocals take somewhat of a backseat, but the songwriting is strong enough to allow the music to shine through.",
+    "“Penelope” and “Bbtone” might be the best tracks on the record, though the album remains remarkably consistent throughout. It's well worth a listen for fans of '90s and 2000s indie music, particularly those who enjoy Death Cab for Cutie or Radiohead."
+  ]
+},{
+
   "slug": "hum-youd-prefer-an-astronaut",
   "artist": "Hum",
   "album": "You'd Prefer an Astronaut",
