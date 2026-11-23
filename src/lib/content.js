@@ -3,6 +3,28 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "boston-boston",
+  "artist": "Boston",
+  "album": "Boston",
+  "year": 1976,
+  "genre": "Classic Rock / Hard Rock / Arena Rock",
+  "published": "2026-11-23",
+  "cover": "https://artwork.jamlaboratory.com/uploads/8ce08783-b284-4dc7-b9be-ea31a02c22fb.jpg",
+  "scores": {
+    "composition": 10,
+    "writing": 9.8,
+    "performance": 10,
+    "production": 10,
+    "intangibles": 10
+  },
+  "body": [
+    "I write this review with the sole desire to contribute, in whatever way I can, to the unadulterated praise of this album.",
+    "From a production, performance, and composition standpoint, this is truly as good as rock can be. To me, Boston represents the North Star of classic rock. Scholz captured lightning in a bottle here, and Delp's soaring vocals and stamina were truly one of a kind, arguably underrated.",
+    "“More Than a Feeling” is quintessential radio rock, complete with a clean, perfectly restrained guitar solo. “Peace of Mind” represents possibly my favorite songwriting in rock, while “Foreplay/Long Time” manages to be fun and complex simultaneously, a challenging feat.",
+    "Very few records consist exclusively of material that still receives radio airplay today, but Boston accomplished that here. It's all wrapped up in one of the few perfect albums I've ever heard, from top to bottom."
+  ]
+},{
+
   "slug": "anxious-bambi",
   "artist": "Anxious",
   "album": "Bambi",
