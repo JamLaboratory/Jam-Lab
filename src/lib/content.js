@@ -3,6 +3,29 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "3-doors-down-seventeen-days",
+  "artist": "3 Doors Down",
+  "album": "Seventeen Days",
+  "year": 2005,
+  "genre": "Post-Grunge / Alternative Rock / Hard Rock",
+  "published": "2026-11-23",
+  "cover": "https://artwork.jamlaboratory.com/uploads/c124ee8a-f394-4d02-89f6-a1ebe2df2cc9.jpg",
+  "scores": {
+    "composition": 6.5,
+    "writing": 8,
+    "performance": 6.7,
+    "production": 6.8,
+    "intangibles": 5
+  },
+  "body": [
+    "*Seventeen Days* lands somewhere in the middle of 3 Doors Down's discography. Sandwiched between a few successful albums, this one gets a little less recognition despite the fairly famous single “Let Me Go.”",
+    "The writing here is pretty consistent, and I've always been a fan of Brad Arnold's voice and the way he conveys his message. However, this record feels a little less personal and intense than *Away from the Sun*, which, to me, represents the band's apex.",
+    "There are still some strong tracks, and overall, the album is a pleasant listen. Notably, “Let Me Go,” “Never Will I Break,” and “Right Where I Belong” are a few highlights. “Landing in London,” a collaboration with Bob Seger, shockingly falls a little flat.",
+    "Although the band seems to epitomize some of the best aspects of post-grunge rock, there's a slight dearth of heaviness and heart that their other albums express so well.",
+    "Bigger fans of the band will still return to this one regularly, but it takes a backseat to *Away from the Sun* and the eponymous record."
+  ]
+},{
+
   "slug": "boston-boston",
   "artist": "Boston",
   "album": "Boston",
