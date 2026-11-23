@@ -3,6 +3,27 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "flatland-cavalry-work-of-heart",
+  "artist": "Flatland Cavalry",
+  "album": "Work of Heart",
+  "year": 2026,
+  "genre": "Country / Americana / Red Dirt",
+  "published": "2026-11-23",
+  "cover": "https://artwork.jamlaboratory.com/uploads/212934c1-2d57-446b-8c09-c6f9aba2c5ae.jpg",
+  "scores": {
+    "composition": 6.5,
+    "writing": 8.6,
+    "performance": 9,
+    "production": 6.5,
+    "intangibles": 6
+  },
+  "body": [
+    "Flatland Cavalry demonstrate with *Work of Heart* that you shouldn't fix what ain't broke. They've been making beautiful records rooted in strong Americana traditions, tight harmonies, and diverse string instrumentation, particularly the interplay between guitar and fiddle.",
+    "They're one of the few acts in popular country and folk music that don't crave attention for attention's sake. There's a dedication to their craft and sound that I genuinely admire. It's down-to-earth, even wholesome at times.",
+    "Flatland Cavalry's tenderness makes them a lovely reprieve from the typical soundscapes of mainstream country music. Backed by strong tracks, particularly “Gone,” this release is a welcome treat in today's musical landscape."
+  ]
+},{
+
   "slug": "opeth-in-cauda-venenum",
   "artist": "Opeth",
   "album": "In Cauda Venenum",
