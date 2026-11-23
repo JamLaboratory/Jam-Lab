@@ -3,6 +3,31 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "anxious-bambi",
+  "artist": "Anxious",
+  "album": "Bambi",
+  "year": 2025,
+  "genre": "Emo / Alternative Rock / Pop-Punk",
+  "published": "2026-11-23",
+  "cover": "https://artwork.jamlaboratory.com/uploads/93ca6729-3d03-4770-98d6-44d61e6da4bf.jpg",
+  "scores": {
+    "composition": 2.9,
+    "writing": 4.5,
+    "performance": 7.8,
+    "production": 5.3,
+    "intangibles": 6.5
+  },
+  "body": [
+    "I first heard Anxious while drinking a beer at one of Nashville's finest breweries. “Counting Sheep” popped up on the brewery's shuffle, paired fittingly with songs by The Wonder Years and The Story So Far.",
+    "*Bambi*, the outfit's sophomore effort, fits comfortably into the current scene.",
+    "Fun harmonies and playful backing vocals are strewn throughout the record, but the lead vocals have questionable melodic direction. “Counting Sheep” is probably the most confident track in that regard, though you have to push through a few weak introductory tracks to get there.",
+    "The guitar work is fuzzy, layered, and fits the band's sound well, though it isn't a centerpiece of the record. Occasionally, it gets lost behind the drums and multitude of vocal inputs.",
+    "“Audrey Go Again” is a musical faux pas (despite those fun backing vocals).",
+    "“Tell Me Why” deserves some love from a composition standpoint, delivering a shockingly impressive bridge.",
+    "I can't say I'm overly excited for a follow-up album, but with some tighter songwriting, this band could absolutely thrive."
+  ]
+},{
+
   "slug": "chevelle-niratias",
   "artist": "Chevelle",
   "album": "NIRATIAS",
