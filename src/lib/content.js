@@ -3,6 +3,28 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "opeth-in-cauda-venenum",
+  "artist": "Opeth",
+  "album": "In Cauda Venenum",
+  "year": 2019,
+  "genre": "Progressive Rock / Progressive Metal",
+  "published": "2026-11-23",
+  "cover": "https://artwork.jamlaboratory.com/uploads/fd46b563-c8f0-48e1-a874-b6afd8f7335e.jpg",
+  "scores": {
+    "composition": 8.6,
+    "writing": 8.5,
+    "performance": 9.6,
+    "production": 9.9,
+    "intangibles": 8
+  },
+  "body": [
+    "In 2019, Opeth released their fourth consecutive album without guttural vocals. Although some fans have been hesitant to embrace this era of the band, Opeth continues to be a monstrous force in progressive music.",
+    "*In Cauda Venenum*, released in both English and Swedish, is a perfect encapsulation of old-school progressive tendencies and dark composition. The album is probably best served in October, evoking the sensation of being trapped inside a haunted, dilapidated mansion.",
+    "“Heart in Hand” and “Lovelorn Crime” are particular highlights. The guitar solo on the latter would easily crack my list of the ten best guitar solos of the century thus far.",
+    "A commitment to atmosphere and intricacy of composition makes this album slightly better than its progressive-driven predecessors, *Heritage* and *Pale Communion*. However, Opeth's distinct ability to write some of the heaviest music in metal still creates a longing for the *Blackwater Park* days."
+  ]
+},{
+
   "slug": "pinback-blue-screen-life",
   "artist": "Pinback",
   "album": "Blue Screen Life",
