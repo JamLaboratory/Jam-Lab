@@ -3,6 +3,27 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "chevelle-niratias",
+  "artist": "Chevelle",
+  "album": "NIRATIAS",
+  "year": 2021,
+  "genre": "Alternative Metal / Hard Rock",
+  "published": "2026-11-23",
+  "cover": "https://artwork.jamlaboratory.com/uploads/8526d199-e58e-4587-8f1b-6da66248960d.jpg",
+  "scores": {
+    "composition": 4.8,
+    "writing": 5.9,
+    "performance": 7,
+    "production": 7.5,
+    "intangibles": 3
+  },
+  "body": [
+    "I put Chevelle in that rare category of rock bands that can seemingly make dozens of records with the same sound and continue to succeed at a high level. The quintessential example of this is AC/DC.",
+    "*Wonder What's Next*, *Hats Off to the Bull*, and *Sci-Fi Crimes* are perfect demonstrations of this consistency in action. However, when I first heard *NIRATIAS* back in 2021, I felt like a piece of the classic Chevelle puzzle was missing, leaving a hole in their sound that was difficult for me to appreciate.",
+    "Although some tracks, including “Peach,” harken back to classic Chevelle tendencies, the band missed the mark slightly on this release."
+  ]
+},{
+
   "slug": "flatland-cavalry-work-of-heart",
   "artist": "Flatland Cavalry",
   "album": "Work of Heart",
