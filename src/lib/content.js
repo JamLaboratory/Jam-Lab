@@ -3,6 +3,30 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "breaking-benjamin-we-are-not-alone",
+  "artist": "Breaking Benjamin",
+  "album": "We Are Not Alone",
+  "year": 2004,
+  "genre": "Alternative Metal / Post-Grunge",
+  "published": "2026-11-23",
+  "cover": "https://artwork.jamlaboratory.com/uploads/75afa313-35be-4f18-8522-9eba83cb32e6.jpg",
+  "scores": {
+    "composition": 8.1,
+    "writing": 4.5,
+    "performance": 8,
+    "production": 6.5,
+    "intangibles": 5
+  },
+  "body": [
+    "Breaking Benjamin released this album and launched themselves into some pretty impressive mainstream success in the mid-2000s. Serving as a crossover between emo and metal, with songs structured in a classic rock suit, Breaking Benjamin has grown to become a massive force in the rock and metal scene.",
+    "This release contains massive hits like “Rain,” “So Cold,” and “Sooner or Later.”",
+    "I've actually found myself buying into some of the intensity and dramatism that this band provides. The riffs are tight, and Benjamin Burnley does a good job of weaving melody around the tracks (though I can imagine his vocal style isn't everybody's cup of tea).",
+    "“Sooner or Later” is actually quite an uplifting and fun track dressed in a heavier coat. Juxtapose this with “Rain,” which sounds like an emo boy's goofy dirge.",
+    "Over time, the band's debut release, *Saturate*, and subsequent release, *Phobia*, have grown on me slightly more than this record, though I'll cherry-pick my favorite songs from this album and definitely return to them often.",
+    "This is a good lesson for anybody willing to overlook some melodramatic writing and aesthetics. Overall, it's solid, radio-friendly hard rock, but nothing earth-shattering or particularly unique."
+  ]
+},{
+
   "slug": "in-flames-the-jester-race",
   "artist": "In Flames",
   "album": "The Jester Race",
