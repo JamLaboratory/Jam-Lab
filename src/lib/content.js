@@ -3,6 +3,29 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "hum-youd-prefer-an-astronaut",
+  "artist": "Hum",
+  "album": "You'd Prefer an Astronaut",
+  "year": 1995,
+  "genre": "Alternative Rock / Space Rock / Shoegaze",
+  "published": "2026-11-22",
+  "cover": "https://artwork.jamlaboratory.com/uploads/a5dd4547-9f9f-4855-a75a-337e7176588d.png",
+  "scores": {
+    "composition": 6.2,
+    "writing": 4.2,
+    "performance": 8,
+    "production": 6.5,
+    "intangibles": 5.5
+  },
+  "body": [
+    "Upon first listen, Hum feels like the hybrid child of Failure, Ride, Nirvana, and the Smashing Pumpkins.",
+    "Blending elements of shoegaze, space rock, and grunge, Hum were a relatively little-known outfit in the ’90s alternative rock scene. This combination may be a hard sell for some listeners, though at times, I certainly bought in. “Stars” is an absolute achievement and deserves every bit of the attention it receives, likely standing as the band's best-known work.",
+    "While the musical chops are clearly there, I would have liked to see them on display a little more. Greater distinction in the mastering could have helped individual tracks feel stronger and more defined.",
+    "“Why I Like the Robins” is another exceptional track. The guitars? Chef's kiss.",
+    "If you're a huge fan of Failure or Ride, this album is absolutely worth checking out. For everyone else, it may not quite stick."
+  ]
+},{
+
   "slug": "alter-bridge-fortress",
   "artist": "Alter Bridge",
   "album": "Fortress",
