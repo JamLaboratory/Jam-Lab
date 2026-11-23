@@ -3,6 +3,30 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "in-flames-the-jester-race",
+  "artist": "In Flames",
+  "album": "The Jester Race",
+  "year": 1996,
+  "genre": "Melodic Death Metal / Gothenburg Metal",
+  "published": "2026-11-23",
+  "cover": "https://artwork.jamlaboratory.com/uploads/6f9a9bff-515e-469d-8cd4-17965051c983.jpg",
+  "scores": {
+    "composition": 9.7,
+    "writing": 7,
+    "performance": 9.5,
+    "production": 6.8,
+    "intangibles": 8.5
+  },
+  "body": [
+    "Swedish metal holds a special place in my heart. When executed properly, it accomplishes what only a few genres can: balancing the extremes of heavy and soft. Great Swedish metal is as face-melting as earthly possible, but tender and even acoustic when called for.",
+    "*The Jester Race* by In Flames is a watershed moment in metal, striking this balance with surgical precision.",
+    "“Moonshield” kicks things off phenomenally with classic Gothenburg galloping riffs, acoustic moments, and pure screams. These elements shine throughout the entirety of the album.",
+    "Good Gothenburg metal is melodic, but not as crisp and seamless as power metal or pop-metal acts. It's effectively a musical Oslo Accords, uniting lovers of progressive metal and black metal.",
+    "Though Swedish metal had been around for a while prior to this album's release, I would argue that this record, along with its de facto siblings, At the Gates' *Slaughter of the Soul* and Opeth's *My Arms, Your Hearse*, propelled the scene into a new dimension—one where '90s kids from Minnesota could buy in.",
+    "Highlights include “Moonshield,” “Artifacts of the Black Rain,” “Wayfarer,” and “The Jester Race.”"
+  ]
+},{
+
   "slug": "3-doors-down-seventeen-days",
   "artist": "3 Doors Down",
   "album": "Seventeen Days",
