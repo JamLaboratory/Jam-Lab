@@ -3,6 +3,28 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "jack-johnson-in-between-dreams",
+  "artist": "Jack Johnson",
+  "album": "In Between Dreams",
+  "year": 2005,
+  "genre": "Acoustic Rock / Folk Pop",
+  "published": "2026-11-23",
+  "cover": "https://artwork.jamlaboratory.com/uploads/4818a590-1e34-45f6-b356-6649b368349d.jpg",
+  "scores": {
+    "composition": 9.9,
+    "writing": 10,
+    "performance": 10,
+    "production": 9.8,
+    "intangibles": 10
+  },
+  "body": [
+    "Jack Johnson's *In Between Dreams* is remarkably simple, beautiful, and consistent, even for a singer-songwriter of his caliber.",
+    "Growing up with this record was a treat because I remember hearing every song and appreciating each track for its peaceful, acoustic flavor and lovely writing.",
+    "This is Jack Johnson at his very best: introspective, laid-back, and warm. Even his acoustic riffing is straightforward yet unique, and it somehow feels as though there's a beautiful marriage between the tones of his guitar and his voice.",
+    "It's hard to find another singer-songwriter album from the 2000s that comes close to this one in terms of quality."
+  ]
+},{
+
   "slug": "breaking-benjamin-we-are-not-alone",
   "artist": "Breaking Benjamin",
   "album": "We Are Not Alone",
