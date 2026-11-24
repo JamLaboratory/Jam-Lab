@@ -3,6 +3,27 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "opeth-heritage",
+  "artist": "Opeth",
+  "album": "Heritage",
+  "year": 2011,
+  "genre": "Progressive Rock / Progressive Metal / Death Metal / Jazz Fusion",
+  "published": "2026-11-23",
+  "cover": "https://artwork.jamlaboratory.com/uploads/1fc9cf06-729d-4bea-a2ec-0a2b4019f8a2.jpg",
+  "scores": {
+    "composition": 8.2,
+    "writing": 5.5,
+    "performance": 7,
+    "production": 7.5,
+    "intangibles": 5.3
+  },
+  "body": [
+    "This record marks the Swedish death metal outfit's departure from guttural vocals following their previous release, *Watershed*, and their entrance into a new realm of progressive rock and metal. Though initially an unfavorably received introduction to a new fusion genre, Opeth did their best to enter a new creative world with this album. The succeeding albums built upon *Heritage*, exploring a new universe of progressive rock with classical elements strewn throughout.",
+    "This album is often a hard egg to crack and will likely remain closer to the bottom of Opeth's discography from a power-ranking perspective. There are, however, nuggets of genius scattered throughout. “Häxprocess” is an interesting track with unique movements. “Slither” has a fun riff but does feel a little weak compared to the band's previous works. “I Feel the Dark” might be the highlight here, with a great vocal melody intertwined with a tight guitar ditty.",
+    "Some of the deeper cuts can make for fun music during a late-night study session or a long drive at dusk, but this probably isn't the Opeth album you'll reach for off your shelf if you're looking to introduce a new fan or get a juicy bite into death metal's greatest artist."
+  ]
+},{
+
   "slug": "jack-johnson-in-between-dreams",
   "artist": "Jack Johnson",
   "album": "In Between Dreams",
