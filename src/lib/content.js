@@ -3,6 +3,29 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "enslaved-mid",
+  "artist": "Enslaved",
+  "album": "Mið",
+  "year": 2026,
+  "genre": "Progressive Metal / Black Metal / Viking Metal",
+  "published": "2026-11-24",
+  "cover": "https://artwork.jamlaboratory.com/uploads/14d0fa1f-74d4-4429-9091-c1819da46798.jpg",
+  "scores": {
+    "composition": 6.2,
+    "writing": 5,
+    "performance": 8.1,
+    "production": 9.5,
+    "intangibles": 3
+  },
+  "body": [
+    "Enslaved have been releasing black metal records since the early '90s. Here, they grace us with *Mið*, another hybrid black metal and progressive metal effort with unique references to Norse mythology and traditional Scandinavian culture.",
+    "“Solar Will” is a powerful black metal track that boasts some pretty impressive chord changes (for a record in its genre), but the interjection of polished, clean choral vocals detracts from the experience. “Mountain” harbors an intensity and showcases the strongest riffs on the record. It's definitely the highlight here and feeds that desire to dig for more tracks like it in their catalog. The final track serves up some tasty bits, but again, the clean vocals don't fit as well, which may be true of black metal more broadly.",
+    "A notable portion of this record (“Spirit Helper,” among others) is dedicated to traditional forms of vocal work, including throat singing. I appreciate the intent there, but for me, the genre is best served by more traditional metal vocal styles.",
+    "Nonetheless, Enslaved do a great job of toeing the line between classic black metal tendencies and progressive movements and composition, which makes the overall listen fairly enjoyable for most metal fans. The accessibility factor is enhanced as a result, particularly for your average metalhead.",
+    "All in all, this is a good metal album, but nothing I'd go digging for or crave during metal season (fall/winter, obviously)."
+  ]
+},{
+
   "slug": "opeth-heritage",
   "artist": "Opeth",
   "album": "Heritage",
