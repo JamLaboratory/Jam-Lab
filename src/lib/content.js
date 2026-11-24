@@ -3,6 +3,28 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "dexter-and-the-moonrocks-friends-that-i-dont-like",
+  "artist": "Dexter and the Moonrocks",
+  "album": "Friends That I Don't Like",
+  "year": 2026,
+  "genre": "Alternative Rock / Post-Grunge / Country Rock / Western Space Grunge",
+  "published": "2026-11-24",
+  "cover": "https://artwork.jamlaboratory.com/uploads/03c2983f-7f56-4bcf-b867-4883f7c655be.jpg",
+  "scores": {
+    "composition": 8,
+    "writing": 6,
+    "performance": 8.5,
+    "production": 8.5,
+    "intangibles": 4
+  },
+  "body": [
+    "Dexter and the Moonrocks' debut full-length effort throws you back into 1999 with a country twang on top. The West Texas outfit has achieved great streaming success with the track “Freakin’ Out” off this record (roughly 250 million streams on Spotify at the time of listening).",
+    "The genre lies somewhere between Seether and today's pop-country hits. It feels like an odd couple, but frankly, it works. Carried by confident guitar lines and phenomenal vocal work by James Tuffs, DATM showcases real potential here.",
+    "“Let It Hurt” is a shockingly excellent ballad. Stronger hard rock tracks include “It’s a Lot” and “Mull It Over.”",
+    "I can't say that this breaks any massive new ground, but frankly, a super-solid hard rock release reminiscent of soundtracks from ’90s coming-of-age movies is a welcome treat in a rock world in need of some juice and new blood. Looking forward to the next release!"
+  ]
+},{
+
   "slug": "alice-in-chains-jar-of-flies",
   "artist": "Alice in Chains",
   "album": "Jar of Flies",
