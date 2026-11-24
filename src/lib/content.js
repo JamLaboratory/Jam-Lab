@@ -3,6 +3,29 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "haywire-617-i-dont-wanna-say-goodbye",
+  "artist": "Haywire 617",
+  "album": "I Don't Wanna Say Goodbye",
+  "year": 2026,
+  "genre": "Hardcore Punk / Boston Hardcore / Beatdown Hardcore",
+  "published": "2026-11-24",
+  "cover": "https://artwork.jamlaboratory.com/uploads/47270fd4-8854-41ff-9e74-a790cc8d3fec.jpg",
+  "scores": {
+    "composition": 5.9,
+    "writing": 3,
+    "performance": 7,
+    "production": 8.2,
+    "intangibles": 4
+  },
+  "body": [
+    "Boston hardcore—after listening, there's no better description of what this record is. High-energy, fun, and complete with vocals reminiscent of a Celtics fan screaming from the nosebleeds.",
+    "How to describe it alternatively? Maybe a mix between The Mighty Mighty Bosstones, Turnstile, and Green Day? I actually quite enjoyed the production style as well, with buzzy basslines and clear channels for each instrument.",
+    "Almost comically short at 19 minutes, it's just about the perfect length for a hardcore punk record of its kind. More Bostonian shouting may have gotten old pretty quickly.",
+    "However, on top of the heckling is some halfway decent melody! “Interstate Love Affair” has a nice little vocal line caked on top of the punk soundscape.",
+    "At the end of the day, I'd be hard-pressed to find myself going back to relive this experience, but I'll say this: seeing these guys live would probably be an absolute blast."
+  ]
+},{
+
   "slug": "enslaved-mid",
   "artist": "Enslaved",
   "album": "Mið",
