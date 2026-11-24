@@ -3,6 +3,28 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "alice-in-chains-jar-of-flies",
+  "artist": "Alice in Chains",
+  "album": "Jar of Flies",
+  "year": 1994,
+  "genre": "Grunge / Acoustic Rock / Alternative Rock",
+  "published": "2026-11-24",
+  "cover": "https://artwork.jamlaboratory.com/uploads/cc04f45e-73a5-4d8d-8ba6-dcb4cc54399f.jpg",
+  "scores": {
+    "composition": 8.8,
+    "writing": 9.6,
+    "performance": 9.9,
+    "production": 9.5,
+    "intangibles": 10
+  },
+  "body": [
+    "At times, a band will jump into a recording studio and simply capture lightning in a bottle. Alice in Chains' *Jar of Flies* is a quintessential example of this. After starting as a pseudo-hair metal band with their debut album, *Facelift*, the group led by Layne Staley and Jerry Cantrell soon developed a more unique approach to music, featuring a combination of heavy riffs, dark thematic material, and iconic vocal harmonies.",
+    "*Jar of Flies* turned this style on its head and showcased a more intimate, acoustic format while still creating a hauntingly beautiful and almost gothic sound. “I Stay Away” is a very underrated track off this record and includes a string arrangement that works surprisingly well. “No Excuses” might be the top track here, with “Nutshell” as a close second.",
+    "As the years have gone by, I've wondered if the group may have benefited from more studio time to explore music like this, but it's hard to complain given the incredible releases we got throughout their career, including a close cousin to this record, their *MTV Unplugged* album.",
+    "It's safe to say that this lands firmly in the category of iconic grunge records, and though it may be a tougher egg to crack, it's very rewarding once you get there."
+  ]
+},{
+
   "slug": "haywire-617-i-dont-wanna-say-goodbye",
   "artist": "Haywire 617",
   "album": "I Don't Wanna Say Goodbye",
