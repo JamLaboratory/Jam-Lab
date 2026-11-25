@@ -3,6 +3,30 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "the-warning-everythings-falling",
+  "artist": "The Warning",
+  "album": "Everything's Falling",
+  "year": 2026,
+  "genre": "Hard Rock / Alternative Rock / Alternative Metal / Post-Grunge",
+  "published": "2026-11-24",
+  "cover": "https://artwork.jamlaboratory.com/uploads/9fdf7ec5-25b6-4cfe-aac6-5d1445b2d689.jpg",
+  "scores": {
+    "composition": 8.5,
+    "writing": 7,
+    "performance": 9,
+    "production": 6,
+    "intangibles": 6
+  },
+  "body": [
+    "Boy, this record was an unexpected treat. The Warning are a trio of sisters hailing from Mexico who boast a powerful, energetic sound and have recently dug their claws into the rock and metal scene.",
+    "Coming into this album blind was a blast. I wasn't sure if I was going to get a heavy metal outfit, glam rock, pop punk, or what have you. Turns out this is just a super-solid hard rock group with tasty riffing, tight chemistry, and fun songwriting.",
+    "I particularly enjoyed “Why Do You Like It When I Cry?”, “Ritual,” “Break,” and “Kerosene.” They aren't afraid to cruise down to an unexpected resolution and riff off it, which is one of my favorite hard rock tendencies (maybe more common in post-grunge than anything).",
+    "Most tracks follow a typical pop formula, but there's no need to deviate when the formula works so dang well.",
+    "Also gotta love the vocal work by Daniela Villarreal. Just outstanding.",
+    "Hopefully, we see a long career here!"
+  ]
+},{
+
   "slug": "anthrax-cursum-perficio",
   "artist": "Anthrax",
   "album": "Cursum Perficio",
