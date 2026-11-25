@@ -3,6 +3,29 @@
 // Article: {slug,title,published,description,hero,body:[paragraphs]}
 // Ranking: {slug,title,published,updated,description,featured,hero,body:[paragraphs]}
 export const reviews = [{
+  "slug": "anthrax-cursum-perficio",
+  "artist": "Anthrax",
+  "album": "Cursum Perficio",
+  "year": 2026,
+  "genre": "Thrash Metal / Heavy Metal",
+  "published": "2026-11-24",
+  "cover": "https://artwork.jamlaboratory.com/uploads/9f2b4488-3e71-43b1-8973-2ffa8471391c.jpg",
+  "scores": {
+    "composition": 3.5,
+    "writing": 2,
+    "performance": 5.5,
+    "production": 7,
+    "intangibles": 2
+  },
+  "body": [
+    "Deep into their back forty, Anthrax emerges a decade after their most recent release with *Cursum Perficio*, a record whose title hints at the potential end of the band's tenure.",
+    "Led largely by Scott Ian's guitar work, the record seems to groove in and out of thrash, hair metal, and even some skate punk energy.",
+    "Most notable and frustrating about this album to me are the vocal performances. Led by Joey Belladonna, we're presented with some amalgamation of David Coverdale and Sammy Hagar, which contrasts irritatingly with the thrash underpinnings of the record. The writing is subpar at best, particularly in the first half of the record.",
+    "We occasionally get glimpses of Scott Ian's intellect in tracks like “Infectious” and “The Edge of Perfection.” The solos are tasty but nothing to write home about. I felt like an additional layer of guitar could complement the album—the mixing felt somewhat empty at times, although I can appreciate some minimalism in this day and age.",
+    "If this is Anthrax's final album, it would unfortunately be a case of fading away rather than burning out. I truly can't make up my mind as to whether or not they should make another effort after this outing following a decade-long hiatus."
+  ]
+},{
+
   "slug": "dexter-and-the-moonrocks-friends-that-i-dont-like",
   "artist": "Dexter and the Moonrocks",
   "album": "Friends That I Don't Like",
